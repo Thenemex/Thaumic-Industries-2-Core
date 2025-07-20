@@ -1,0 +1,16 @@
+[
+    {
+        "modid": "TCI2Core",
+        "name": "Thaumic Industries 2 : Core",
+        "description": "The core mod for my modpack Thaumic Industries 2 : Expert. Adds things that don't fit in my other mods",
+        "version": ${version},
+        "mcversion": ${mcversion},
+        "url": "",
+        "updateUrl": "",
+        "authorList": ["Thenemex"],
+        "credits": "Thanks for Azanor for making Thaumcraft",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": ["Thaumcraft, NemexLib"]
+    }
+]
