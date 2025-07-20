@@ -7,9 +7,15 @@ import static thaumicindustries2core.ThaumicIndustries2Core.modName;
 
 public class Config extends AConfig {
 
+    public static boolean scribingTools;
+
     public Config(FMLPreInitializationEvent event, String version) {
         super(event, modName, modName, version);
     }
 
-    protected void loadConfig() {}
+    protected void loadConfig() {
+        String expert = "Expert-Tweaks";
+        config.addCustomCategoryComment(expert, "You can tweak off/on expert changes here");
+        scribingTools = newEntry(expert, "ScribingTools", true);
+    }
 }
