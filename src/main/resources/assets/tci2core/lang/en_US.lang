@@ -1,0 +1,19 @@
+# -- Research --
+# Formatting:
+#   §l 	    Bold
+#   §m 	    Strikethrough
+#   §n 	    Underline
+#   §o 	    Italic
+#   §r      Reset
+#   <BR>    LineBreak
+#   <LINE>  Fancy LineBreak
+#
+# Template:
+#   tci2core_research_name.KEY = Research name
+#   tci2core_research_text.KEY = Research subtext
+#   tci2core_research_page.KEY.NUMBER = Research text on page of number NUMBER
+#
+tci2core_research_name.VANILLAFURNACE=Stone Furnace
+tci2core_research_text.VANILLAFURNACE=It burns !
+tci2core_research_page.VANILLAFURNACE.1=After some struggles on your first steps through this world, you finally discover how to smelt items like your ancestors did.
+#
