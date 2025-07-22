@@ -15,8 +15,11 @@ import static thaumcraft.api.aspects.Aspect.*;
 @SuppressWarnings("rawtypes")
 public class VanillaFurnaceCompoundRecipes extends AResearch {
 
+    public final static String tag = "VANILLAFURNACE";
+    public final static Aspects compound = new Aspects(new Aspect[]{FIRE, EARTH, ORDER, ENTROPY}, 10, 10, 5, 5);
+
     public VanillaFurnaceCompoundRecipes() {
-        super("ARTIFICE", "VANILLAFURNACE", new ItemStack(Blocks.furnace));
+        super("ARTIFICE", tag, new ItemStack(Blocks.furnace));
     }
 
     @Override
@@ -27,7 +30,6 @@ public class VanillaFurnaceCompoundRecipes extends AResearch {
     }
 
     protected List addRecipeMagicalFurnace() {
-        Aspects aspects = new Aspects(new Aspect[]{FIRE, EARTH, ORDER, ENTROPY}, 10, 10, 5, 5);
         ItemStack cobble = new ItemStack(Blocks.cobblestone),
                   cbhalf = new ItemStack(Blocks.stone_slab, 1, 3),
                     coal = new ItemStack(Blocks.coal_block);
@@ -35,7 +37,7 @@ public class VanillaFurnaceCompoundRecipes extends AResearch {
                 cobble, cobble, cobble,     cobble, cobble, cobble,     cobble, cobble, cobble,
                 cobble, cbhalf, cobble,     cbhalf, coal,   cbhalf,     cobble, cbhalf, cobble,
                 cobble, cbhalf, cobble,     cbhalf, cobble, cbhalf,     cobble, cbhalf, cobble};
-        return CompoundAdder.addCompoundRecipe(tag, aspects, 3, 3, 3, structure);
+        return CompoundAdder.addCompoundRecipe(tag, compound, 3, 3, 3, structure);
     }
 
     // ToDo - Add recipe with 8 Arcane Stone

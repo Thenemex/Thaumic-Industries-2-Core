@@ -1,8 +1,10 @@
 package thaumicindustries2core.model.config;
 
+import nemexlib.api.events.WandEventHandler;
 import nemexlib.api.recipes.arcane.ArcaneAdder;
 import nemexlib.api.thaumcraft.API;
 import nemexlib.api.thaumcraft.aspects.Aspects;
+import nemexlib.api.thaumcraft.research.AResearch;
 import nemexlib.api.thaumcraft.research.Research;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -12,7 +14,10 @@ import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
 import thaumcraft.common.config.ConfigResearch;
+import thaumicindustries2core.model.events.VanillaFurnaceHandler;
 import thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes;
+
+import java.util.HashMap;
 
 import static net.minecraftforge.oredict.OreDictionary.getOres;
 import static thaumcraft.api.aspects.Aspect.*;
@@ -22,6 +27,9 @@ import static thaumicindustries2core.config.Config.scribingTools;
 import static thaumicindustries2core.config.Config.vanillaFurnace;
 
 public class ConfigExpertTweaks {
+
+    public static WandEventHandler vanillaFurnaceHandler;
+    public final static HashMap<String, AResearch> researchMap = new HashMap<>();
 
     public static void init() {
         Research.modID = "tci2core";
@@ -48,7 +56,9 @@ public class ConfigExpertTweaks {
     }
 
     protected static void loadExpertVanillaFurnace_COMPOUND() {
+        VanillaFurnaceHandler.initBlueprint();
+        vanillaFurnaceHandler = new VanillaFurnaceHandler();
         // Loading the research
-        new VanillaFurnaceCompoundRecipes();
+        researchMap.put(VanillaFurnaceCompoundRecipes.tag, new VanillaFurnaceCompoundRecipes());
     }
 }
