@@ -16,6 +16,8 @@ public class VanillaFurnaceHandler extends WandEventHandler {
     private static Block[][][] blueprint;
     protected final String researchTag;
 
+    private static final Block slab = Blocks.stone_slab;
+
     public VanillaFurnaceHandler() {
         super(new BlockType[]{new BlockType(Blocks.coal_block)});
         // ToDo Add compatibility with Charcoal Block
@@ -25,7 +27,6 @@ public class VanillaFurnaceHandler extends WandEventHandler {
 
     public static void initBlueprint() {
         Block cobble = Blocks.cobblestone,
-                slab = Blocks.stone_slab,
                 coal = Blocks.coal_block;
 
         blueprint = new Block[][][]
@@ -43,24 +44,25 @@ public class VanillaFurnaceHandler extends WandEventHandler {
         if (!player.isSneaking()) return false; // Player needs to be sneaking
         // Code for editing world
         // if (canFitVanillaFurnace(world, x, y, z) && wand.consumeAllVisCrafting(heldItem, player, VanillaFurnaceCompoundRecipes.compound, true))
-        canFitVanillaFurnace(world, x, y, z);
+        logger.info("FINAL = ", canFitVanillaFurnace(world, x, y, z));
         return false;
     }
 
     protected boolean canFitVanillaFurnace(World world, int x, int y, int z) {
         logger.info("Clicked at : (" + x + "," + y + "," + z + ")");
         Block block;
-        boolean fit = true; // ToDo checks at each iteration if at least one is false
-        for (int yy = 0; yy < 3; yy++) {
-            for (int xx = 0; xx < 3; xx++) {
+        boolean fit;
+        for (int yy = 0; yy < 3; yy++)
+            for (int xx = 0; xx < 3; xx++)
                 for (int zz = 0; zz < 3; zz++) {
                     block = world.getBlock(x + xx - 1, y - yy + 1, z + zz - 1);
-                    logger.info("(",x + xx - 1,",",y - yy + 1,",", z + zz - 1,")");
-                    logger.info(block, " = ", blueprint[yy][xx][zz], " -> ", block.equals(blueprint[yy][xx][zz]));
+                    fit = block.equals(blueprint[yy][xx][zz]);
+                    if (fit && block.equals(slab))
+                        // If block matches blueprint AND is a slab -> check for metadata 3 (Cobblestone Slab)
+                        fit = world.getBlockMetadata(x + xx - 1, y - yy + 1, z + zz - 1) == 3;
+                    logger.info(block, " -> ", fit);
+                    if (!fit) return false;
                 }
-            }
-        }
-        logger.info("- - - - - - - - - - - - - - - - - - - - - - - - -");
         return true;
     }
 
