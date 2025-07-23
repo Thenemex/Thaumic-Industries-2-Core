@@ -22,7 +22,7 @@ public class ThaumicIndustries2Core{
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        config = new Config(event).init(); // Init config // Custom folder with mod name
+        config = new Config(event).init(); // Init config
     }
 
     @Mod.EventHandler

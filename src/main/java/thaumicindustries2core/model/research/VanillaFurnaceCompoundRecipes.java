@@ -1,15 +1,19 @@
 package thaumicindustries2core.model.research;
 
 import nemexlib.api.recipes.mystical.CompoundAdder;
+import nemexlib.api.recipes.workbench.WorkbenchAdder;
+import nemexlib.api.recipes.workbench.WorkbenchRemover;
 import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.research.ResearchPage;
 
 import java.util.List;
 
+import static nemexlib.api.items.ItemFinder.findItemTC;
 import static thaumcraft.api.aspects.Aspect.*;
 
 @SuppressWarnings("rawtypes")
@@ -26,10 +30,19 @@ public class VanillaFurnaceCompoundRecipes extends AResearch {
     public void init() {
         this.setResearchAspects(new Aspect[]{FIRE, ENTROPY, EARTH}, 2, 6, 6);
         this.setNewResearch(0, -5).setPages(newTextPage(1),
-                new ResearchPage(addRecipeMagicalFurnace()));
+                new ResearchPage(addCompoundRecipeFurnace()),
+                new ResearchPage(addArcaneRecipeFurnace()));
     }
 
-    protected List addRecipeMagicalFurnace() {
+    protected IRecipe addArcaneRecipeFurnace() {
+        ItemStack furnace = new ItemStack(Blocks.furnace);
+        // Remove vanilla recipe
+        WorkbenchRemover.i().removeItem(furnace);
+        // Adds a vanilla recipe from arcane stone
+        return WorkbenchAdder.addRecipe(furnace, false, "SSS", "S S", "SSS", 'S', findItemTC("blockCosmeticSolid", 6));
+    }
+
+    protected List addCompoundRecipeFurnace() {
         ItemStack cobble = new ItemStack(Blocks.cobblestone),
                   cbhalf = new ItemStack(Blocks.stone_slab, 1, 3),
                     coal = new ItemStack(Blocks.coal_block);
@@ -40,11 +53,6 @@ public class VanillaFurnaceCompoundRecipes extends AResearch {
         return CompoundAdder.addCompoundRecipe(tag, compound, 3, 3, 3, structure);
     }
 
-    // ToDo - Add recipe with 8 Arcane Stone
-    // ToDo - Remove Vanilla furnace default recipe
-
     @Override
-    public void setResearchProperties() {
-
-    }
+    public void setResearchProperties() {}
 }
