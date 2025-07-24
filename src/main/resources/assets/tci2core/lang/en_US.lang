@@ -13,7 +13,7 @@
 #   tci2core_research_text.KEY = Research subtext
 #   tci2core_research_page.KEY.NUMBER = Research text on page of number NUMBER
 #
-tci2core_research_name.VANILLAFURNACE=Stone Furnace
-tci2core_research_text.VANILLAFURNACE=It burns !
-tci2core_research_page.VANILLAFURNACE.1=After some struggles on your first steps through this world, you finally discover how to smelt items like your ancestors did.<LINE>You will need the sufficient amount of vis in your wand, then sneak and hit the coal block with it to transform the construct to a stone furnace !
+mod_research_name.VANILLAFURNACE=Stone Furnace
+mod_research_text.VANILLAFURNACE=It burns !
+mod_research_page.VANILLAFURNACE.1=After some struggles on your first steps through this world, you finally discover how to smelt items like your ancestors did.<LINE>You will need the sufficient amount of vis in your wand, then sneak and hit the coal block with it to transform the construct to a stone furnace !
 #

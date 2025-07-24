@@ -32,7 +32,6 @@ public class ConfigExpertTweaks {
     public final static HashMap<String, AResearch> researchMap = new HashMap<>();
 
     public static void init() {
-        Research.modID = "tci2core";
         if (scribingTools) loadExpertScribingTools_ARCANE();
         if (vanillaFurnace) loadExpertVanillaFurnace_COMPOUND();
     }

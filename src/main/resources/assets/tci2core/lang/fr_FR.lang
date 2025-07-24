@@ -13,7 +13,7 @@
 #   tci2core_research_text.KEY = Research subtext
 #   tci2core_research_page.KEY.NUMBER = Research text on page of number NUMBER
 #
-tci2core_research_name.VANILLAFURNACE=Four en pierre
-tci2core_research_text.VANILLAFURNACE=Ca cuit !
-tci2core_research_page.VANILLAFURNACE.1=Apres avoir rencontre des difficultes lors de vos premiers pas dans ce monde, vous avez enfin decouvert une voie pour cuire des objets comme vos ancetres.<LINE>Il vous faudra le vis suffisant dans votre baguette, puis s'accroupir et mettre un coup de baguette sur le block de charbon pour transformer la structure en four !
+mod_research_name.VANILLAFURNACE=Four en pierre
+mod_research_text.VANILLAFURNACE=Ca cuit !
+mod_research_page.VANILLAFURNACE.1=Apres avoir rencontre des difficultes lors de vos premiers pas dans ce monde, vous avez enfin decouvert une voie pour cuire des objets comme vos ancetres.<LINE>Il vous faudra le vis suffisant dans votre baguette, puis s'accroupir et mettre un coup de baguette sur le block de charbon pour transformer la structure en four !
 #
