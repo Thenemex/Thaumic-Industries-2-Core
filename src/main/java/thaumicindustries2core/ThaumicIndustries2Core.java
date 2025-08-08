@@ -13,7 +13,7 @@ import static thaumicindustries2core.ThaumicIndustries2Core.dependencies;
 import static thaumicindustries2core.ThaumicIndustries2Core.modID;
 
 @SuppressWarnings({"unused", "EmptyMethod"})
-@Mod(modid = modID, useMetadata = true, version = "1.1.0.1", dependencies = dependencies)
+@Mod(modid = modID, useMetadata = true, version = "1.2", dependencies = dependencies)
 public class ThaumicIndustries2Core{
 
     public static final String modID = "TCI2Core", modName = "ThaumicIndustries2Core";
