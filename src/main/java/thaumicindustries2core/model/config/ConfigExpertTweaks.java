@@ -6,7 +6,6 @@ import nemexlib.api.recipes.workbench.WorkbenchRemover;
 import nemexlib.api.thaumcraft.API;
 import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;
-import nemexlib.api.thaumcraft.research.Research;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -15,9 +14,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
-import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.config.ConfigResearch;
-import thaumicindustries2core.ThaumicIndustries2Core;
 import thaumicindustries2core.model.events.VanillaFurnaceHandler;
 import thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes;
 
@@ -60,24 +57,27 @@ public class ConfigExpertTweaks {
         API.addPage(research, new ResearchPage(recipes), 6);
     }
 
-    // Remove recipes from CraftingManager AND ConfigRecipes TC4
-    // Fish OreDict Like-> new ItemStack(Items.field_151115_aP, 1, 32767)
     protected static void loadExpertThaumometer_ARCANE() {
         ResearchItem research = API.getResearch("ARTIFICE", "THAUMOMETER");
         // Removing recipe pages for research
         API.removePage(research, 2);
+        // Instanciating items
+        ItemStack thaumometer = new ItemStack(itemThaumometer),
+                shardOreDict = new ItemStack(itemShard, 1, 32767),
+                goldIngot = new ItemStack(Items.gold_ingot);
         // Removing recipes for Thaumometer
-        ItemStack thaumometer = new ItemStack(itemThaumometer);
         WorkbenchRemover.i().removeItem(thaumometer);
         ConfigResearch.recipes.remove("Thaumometer");
         // Adding the page with Arcane recipe
-        IArcaneRecipe recipe = ArcaneAdder.addArcane("THAUMOMETER", new Aspects(new Aspect[]{AIR, EARTH, ORDER}, 3, 8, 5),
+        IArcaneRecipe[] recipes = new IArcaneRecipe[2];
+        for (int i = 0; i < recipes.length; i++)
+                recipes[i] = ArcaneAdder.addArcane("THAUMOMETER", new Aspects(new Aspect[]{AIR, EARTH, ORDER}, 3, 8, 5),
                 false, false, thaumometer,
                 " S ", "GVG", " S ",
-                'S', new ItemStack(itemShard, 1, 32767),
-                'G', new ItemStack(Items.gold_ingot),
+                'S', (i == 0) ? shardOreDict : goldIngot,
+                'G', (i == 0) ? goldIngot : shardOreDict,
                 'V', new ItemStack(Blocks.glass));
-        API.addPage(research, new ResearchPage(recipe), 2);
+        API.addPage(research, new ResearchPage(recipes), 2);
     }
 
     protected static void loadExpertVanillaFurnace_COMPOUND() {
