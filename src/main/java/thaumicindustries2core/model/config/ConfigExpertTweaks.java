@@ -1,7 +1,6 @@
 package thaumicindustries2core.model.config;
 
 import nemexlib.api.events.WandEventHandler;
-import nemexlib.api.items.ItemFinder;
 import nemexlib.api.recipes.arcane.ArcaneAdder;
 import nemexlib.api.recipes.workbench.WorkbenchRemover;
 import nemexlib.api.thaumcraft.API;
@@ -15,7 +14,6 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
-import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.config.ConfigResearch;
 import thaumicindustries2core.model.events.VanillaFurnaceHandler;
 import thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes;
