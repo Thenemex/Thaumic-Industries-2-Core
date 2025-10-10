@@ -10,6 +10,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
+import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.research.ResearchItem;
@@ -92,8 +93,8 @@ public class ConfigExpertTweaks {
     protected static void loadExpertBoneBow_ARCANE() {
         ResearchItem research = API.getResearch("ARTIFICE", "BONEBOW");
         // Removing recipe for BoneBow
-        CraftingManager.getInstance().getRecipeList().remove(ConfigResearch.recipes.get("BoneBow"));
-        ConfigResearch.recipes.remove("BoneBow");
+        IArcaneRecipe boneBowRecipe = (IArcaneRecipe) ConfigResearch.recipes.remove("BoneBow");
+        ThaumcraftApi.getCraftingRecipes().remove(boneBowRecipe);
         // Replacing the page with Arcane recipe
         IArcaneRecipe recipe = ArcaneAdder.addArcane("BONEBOW", new Aspects(new Aspect[]{ENTROPY, AIR}, 60, 35),
                 false, false, new ItemStack(itemBowBone),
