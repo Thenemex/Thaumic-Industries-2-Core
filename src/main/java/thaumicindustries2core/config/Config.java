@@ -7,8 +7,8 @@ import static thaumicindustries2core.ThaumicIndustries2Core.modName;
 
 public class Config extends AConfig {
 
-    public static boolean scribingTools, thaumometer, vanillaFurnace;
-    protected static String version = "1.2";
+    public static boolean scribingTools, thaumometer, vanillaFurnace, boneBow;
+    protected static String version = "1.3";
 
     public Config(FMLPreInitializationEvent event) {
         super(event, modName, modName, version);
@@ -20,5 +20,6 @@ public class Config extends AConfig {
         scribingTools = newEntry(expert, "ScribingTools", true, "Sets a new arcane recipe, that will only accept TC4 Phials and not empty bottles");
         thaumometer = newEntry(expert, "Thaumometer", true, "Sets a new arcane recipe using some vis");
         vanillaFurnace = newEntry(expert, "VanillaFurnace", true, "Adds a mystical construct recipe for the vanilla furnace, and adds another one with arcane stone");
+        boneBow = newEntry(expert, "BoneBow", true, "Sets a new arcane recipe with harder components");
     }
 }
