@@ -38,5 +38,5 @@ public class ThaumicIndustries2Core{
         ConfigExpertTweaks.init();
     }
 
-    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.0.0.7,);after:tc4tweak";
+    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.0.0.8,);after:tc4tweak";
 }
