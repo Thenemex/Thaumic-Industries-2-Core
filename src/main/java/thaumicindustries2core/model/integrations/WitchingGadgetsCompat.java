@@ -2,7 +2,6 @@ package thaumicindustries2core.model.integrations;
 
 import nemexlib.api.integrations.ACompat;
 import nemexlib.api.items.ItemFinder;
-import thaumicindustries2core.config.Config;
 import thaumicindustries2core.model.config.ConfigExpertTweaks;
 
 public class WitchingGadgetsCompat extends ACompat {
@@ -13,7 +12,7 @@ public class WitchingGadgetsCompat extends ACompat {
 
     @Override
     public void loadIntegration() {
-        if (Config.wgEnabled) addYarnToExpertBoneBow();
+        addYarnToExpertBoneBow();
     }
 
     protected void addYarnToExpertBoneBow() {
