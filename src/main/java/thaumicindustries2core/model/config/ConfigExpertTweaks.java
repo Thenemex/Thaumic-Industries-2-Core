@@ -89,7 +89,6 @@ public class ConfigExpertTweaks {
         // Loading the research
         researchMap.put(VanillaFurnaceCompoundRecipes.tag, new VanillaFurnaceCompoundRecipes());
     }
-
     protected static void loadExpertBoneBow_ARCANE() {
         ResearchItem research = API.getResearch("ARTIFICE", "BONEBOW");
         // Adding Bone Rod as prereq
@@ -104,7 +103,7 @@ public class ConfigExpertTweaks {
                 'S', new ItemStack(Items.string),
                 'B', new ItemStack(Items.bone),
                 'Y', specialString, // Will turn to Yarn if Witching Gagdets is loaded
-                'W', new ItemStack(Items.bow),
+                'W', new ItemStack(Items.bow, 1, 32767),
                 'R', findItemTC("WandRod", 7)); // Bone Rod
         API.replacePage(research, new ResearchPage(recipe), 2);
     }
