@@ -22,7 +22,6 @@ import thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes;
 import java.util.HashMap;
 
 import static nemexlib.api.items.ItemFinder.findItemTC;
-import static net.minecraftforge.oredict.OreDictionary.getOres;
 import static thaumcraft.api.aspects.Aspect.*;
 import static thaumcraft.common.config.ConfigItems.*;
 import static thaumicindustries2core.config.Config.*;
@@ -52,14 +51,12 @@ public class ConfigExpertTweaks {
         CraftingManager.getInstance().getRecipeList().remove(ConfigResearch.recipes.get("Scribe2"));
         ConfigResearch.recipes.remove("Scribe2");
         // Adding the page with Arcane recipe
-        IArcaneRecipe[] recipes = new IArcaneRecipe[getOres("dyeBlack").size()];
-        for (int i = 0; i < getOres("dyeBlack").size(); i++)
-            recipes[i] = ArcaneAdder.addArcane("RESEARCH", new Aspects(new Aspect[]{ORDER, AIR, WATER}, 5, 3, 3),
-                    true, false, new ItemStack(itemInkwell),
-                    new ItemStack(itemEssence, 1, 0),
-                    new ItemStack(Items.feather),
-                    getOres("dyeBlack").get(i)); // ToDo try to implement ore recipe for lighter NEI
-        API.addPage(research, new ResearchPage(recipes), 6);
+        IArcaneRecipe recipe = ArcaneAdder.addArcane("RESEARCH", new Aspects(new Aspect[]{ORDER, AIR, WATER}, 5, 3, 3),
+                true, false, new ItemStack(itemInkwell),
+                new ItemStack(itemEssence, 1, 0),
+                new ItemStack(Items.feather),
+                "dyeBlack");
+        API.addPage(research, new ResearchPage(recipe), 6);
     }
     protected static void loadExpertThaumometer_ARCANE() {
         ResearchItem research = API.getResearch("ARTIFICE", "THAUMOMETER");
