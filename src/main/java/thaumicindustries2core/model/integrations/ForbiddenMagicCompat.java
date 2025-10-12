@@ -44,7 +44,7 @@ public class ForbiddenMagicCompat extends ACompat {
         ItemStack balancedShard = findItemTC("ItemShard", 6);
         InfusionRecipe recipe = InfusionAdder.addInfusion("CRYSTALWELL", 2,
                 new Aspects(10, SENSES, ORDER, WATER),
-                findItem(mod,"Crystalwell"), findItemTC("ItemInkwell"), // Output & Input
+                findItem(mod,"Crystalwell"), findItemTC("ItemInkwell", 32767), // Output & Input
                 findItemTC("ItemResource", 9), // Knowledge Fragment
                 balancedShard,
                 JarMaker.make(CRYSTAL, 64),
