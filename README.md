@@ -6,8 +6,8 @@ A config file is also present for turning off/on everything you want or don't wa
 ### List of tweaks :
   - Replaced the Vanilla Stone Furnace with a mystical construct (some Cobblestone & Coal Block)
   - Replaced the Scribing Tools recipe with an Arcane recipe (Glass Phial, Feather and Ink)
-  - Replaced the Thaumometer recipe with an Arcane recipe (only added some vis)
   - Replaced the Crystal Scribing Tools with an Infusion recipe
+  - Replaced the Thaumometer recipe with an Arcane recipe (only added some vis)
     - The recipe can also be rotated 90° sideways (you can flip the gold and shards)
   - Added a new expert recipe for Bone Bow
 
