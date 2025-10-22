@@ -11,6 +11,8 @@ import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
+import thaumicindustries2core.ThaumicIndustries2Core;
+import thaumicindustries2core.config.Config;
 import thaumicindustries2core.model.config.ConfigExpertTweaks;
 import witchinggadgets.common.WGResearch;
 
@@ -27,7 +29,8 @@ public class WitchingGadgetsCompat extends ACompat {
     @Override
     public void loadIntegration() {
         addYarnToExpertBoneBow();
-        loadExpertSeraphShoulders_INFUSION(); // ToDo Config entry
+        if (Config.seraphShoulders)
+            loadExpertSeraphShoulders_INFUSION();
     }
 
     protected void addYarnToExpertBoneBow() {
