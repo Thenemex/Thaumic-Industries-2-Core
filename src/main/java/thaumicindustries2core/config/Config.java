@@ -9,7 +9,7 @@ public class Config extends AConfig {
 
     public static boolean scribingTools, thaumometer, vanillaFurnace, boneBow, crystalWell, seraphShoulders;
     public static boolean fmEnabled, wgEnabled;
-    protected static String version = "1.5";
+    protected static final String version = "1.5";
 
     public Config(FMLPreInitializationEvent event) {
         super(event, modName, modName, version);
