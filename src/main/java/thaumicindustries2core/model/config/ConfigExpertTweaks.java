@@ -89,7 +89,7 @@ public class ConfigExpertTweaks {
     protected static void loadExpertBoneBow_ARCANE() {
         ResearchItem research = API.getResearch("ARTIFICE", "BONEBOW");
         // Adding Bone Rod as prereq
-        API.addParents(research, true, "ROD_BONE");
+        API.addParents(research, true, "ROD_bone");
         // Removing recipe for BoneBow
         IArcaneRecipe boneBowRecipe = (IArcaneRecipe) ConfigResearch.recipes.remove("BoneBow");
         ThaumcraftApi.getCraftingRecipes().remove(boneBowRecipe);
