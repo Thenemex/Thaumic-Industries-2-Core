@@ -20,7 +20,7 @@ compileJava {
     targetCompatibility = '1.8'
 }
 
-version = '1.5.0.2'
+version = '1.5.0.3'
 /* A.B.C.D
     A = Major version
     B = Adding content or researches/recipes
