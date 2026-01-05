@@ -46,7 +46,7 @@ public class WitchingGadgetsCompat extends ACompat {
                 bellows = findItemTC("blockWoodenDevice"),
                 feather = new ItemStack(Items.feather);
         // Removing recipe for Seraph Shoulders
-        new InfusionRemover(2, ThaumcraftApi.getCraftingRecipes(), WGResearch.recipeList.values()).removeItem(seraphShoulders);
+        new InfusionRemover(2, ThaumcraftApi.getCraftingRecipes(), WGResearch.recipeList.values()).removePrecise(seraphShoulders);
         // Replacing the page with new recipe
         InfusionRecipe recipe = InfusionAdder.addInfusion("WGBAUBLES", 4,
                 new Aspects(new int[]{60, 40, 30, 20, 15}, FLIGHT, AIR, ORDER, MOTION, GREED),
