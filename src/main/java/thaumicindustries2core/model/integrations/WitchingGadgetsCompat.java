@@ -41,7 +41,7 @@ public class WitchingGadgetsCompat extends ACompat {
         // Adding Arcane Bellows as prereq
         API.addParents(research, true, "BELLOWS");
         // Naming items
-        ItemStack seraphShoulders = findItem(mod, "item.WG_Baubles"),
+        ItemStack seraphShoulders = findItem(mod, "item.WG_Baubles", 0),
                 airShard = findItemTC("ItemShard"),
                 bellows = findItemTC("blockWoodenDevice"),
                 feather = new ItemStack(Items.feather);
