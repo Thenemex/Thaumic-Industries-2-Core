@@ -32,10 +32,9 @@ public class ForbiddenMagicCompat extends ACompat {
     protected void loadExpertCrystalWell_INFUSION() {
         ResearchItem research = API.getResearch("FORBIDDEN", "CRYSTALWELL");
         // Adding Warded Jar as prereq
-        API.addParents(research, true, "JARLABEL");
-        API.addParents(research, true, "INFUSION");
+        API.addParents(research, true, "INFUSION"); // Includes JARLABEL as needed research
         // Naming items
-        ItemStack crystalWell = findItem(mod,"Crystalwell"),
+        ItemStack crystalWell = findItem(mod, "Crystalwell"),
                 balancedShard = findItemTC("ItemShard", 6);
         // Removing recipe for Crystal Well
         new ArcaneRemover(2, ThaumcraftApi.getCraftingRecipes(), ForbiddenResearch.recipes.values()).removeItem(crystalWell);
