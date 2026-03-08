@@ -20,8 +20,8 @@ import static thaumcraft.api.aspects.Aspect.*;
 
 public class ForbiddenMagicCompat extends ACompat {
 
-    public ForbiddenMagicCompat(String mod) {
-        super(mod);
+    public ForbiddenMagicCompat(String mod, String tab) {
+        super(mod, tab);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class ForbiddenMagicCompat extends ACompat {
     }
 
     protected void loadExpertCrystalWell_INFUSION() {
-        ResearchItem research = API.getResearch("FORBIDDEN", "CRYSTALWELL");
+        ResearchItem research = API.getResearch(tab, "CRYSTALWELL");
         // Adding Warded Jar as prereq
         API.addParents(research, true, "INFUSION"); // Includes JARLABEL as needed research
         // Naming items

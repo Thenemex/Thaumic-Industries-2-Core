@@ -21,8 +21,8 @@ import static thaumcraft.api.aspects.Aspect.*;
 
 public class WitchingGadgetsCompat extends ACompat {
 
-    public WitchingGadgetsCompat(String mod) {
-        super(mod);
+    public WitchingGadgetsCompat(String mod, String tab) {
+        super(mod, tab);
     }
 
     @Override
@@ -37,7 +37,7 @@ public class WitchingGadgetsCompat extends ACompat {
     }
 
     protected void loadExpertSeraphShoulders_INFUSION() {
-        ResearchItem research = API.getResearch("WITCHGADG", "WGBAUBLES");
+        ResearchItem research = API.getResearch(tab, "WGBAUBLES");
         // Adding Arcane Bellows as prereq
         API.addParents(research, true, "BELLOWS");
         // Naming items
