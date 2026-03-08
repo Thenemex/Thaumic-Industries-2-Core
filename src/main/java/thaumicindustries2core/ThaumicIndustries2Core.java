@@ -9,12 +9,13 @@ import nemexlib.config.AConfig;
 import thaumicindustries2core.config.Config;
 import thaumicindustries2core.model.config.ConfigExpertTweaks;
 import thaumicindustries2core.model.config.ConfigIntegrations;
+import thaumicindustries2core.model.config.ConfigRecipeMerges;
 
 import static thaumicindustries2core.ThaumicIndustries2Core.dependencies;
 import static thaumicindustries2core.ThaumicIndustries2Core.modID;
 
 @SuppressWarnings({"unused", "EmptyMethod"})
-@Mod(modid = modID, useMetadata = true, version = "1.5.0.4", dependencies = dependencies)
+@Mod(modid = modID, useMetadata = true, version = "1.6", dependencies = dependencies)
 public class ThaumicIndustries2Core{
 
     public static final String modID = "TCI2Core", modName = "ThaumicIndustries2Core";
@@ -36,7 +37,9 @@ public class ThaumicIndustries2Core{
         ConfigIntegrations.init();
         // Loading recipe changes
         ConfigExpertTweaks.init();
+        // Loading recipe merges
+        ConfigRecipeMerges.init();
     }
 
-    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.3,);after:ForbiddenMagic;after:tc4tweak;after:WitchingGadgets;after:TC4Patched";
+    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.6,);after:ForbiddenMagic;after:tc4tweak;after:WitchingGadgets;after:TC4Patched";
 }
