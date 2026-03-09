@@ -43,5 +43,5 @@ public class ThaumicIndustries2Core{
         ConfigRecipeMerges.init();
     }
 
-    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.7,);after:ForbiddenMagic;after:MagicCookie;after:tc4tweak;after:TC4Patched;after:WitchingGadgets";
+    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.7,);after:ForbiddenMagic;after:MagicCookie;after:thaumicbases;after:TC4Patched;after:tc4tweak;after:WitchingGadgets";
 }

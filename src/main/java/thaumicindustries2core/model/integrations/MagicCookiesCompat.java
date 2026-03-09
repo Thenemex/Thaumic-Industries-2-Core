@@ -20,9 +20,7 @@ public class MagicCookiesCompat extends ACompat {
 
     protected void deleteWoolToStringCrucibleRecipe() {
         String key = "WOOLTOSTRING";
-        // Removing recipe for String
         RecipeHelpers.crucibleRemover.removeItem(new ItemStack(Items.string), key);
-        // Removing research
         API.removeResearch(tab, key);
     }
 }
