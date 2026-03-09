@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import nemexlib.api.util.Logger;
 import nemexlib.config.AConfig;
 import thaumicindustries2core.config.Config;
+import thaumicindustries2core.model.RecipeHelpers;
 import thaumicindustries2core.model.config.ConfigExpertTweaks;
 import thaumicindustries2core.model.config.ConfigIntegrations;
 import thaumicindustries2core.model.config.ConfigRecipeMerges;
@@ -28,8 +29,7 @@ public class ThaumicIndustries2Core{
     }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent ignoredEvent) {
-    }
+    public void init(FMLInitializationEvent ignoredEvent) {}
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent ignoredEvent) {

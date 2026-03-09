@@ -13,6 +13,7 @@ import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
 import thaumicindustries2core.config.Config;
+import thaumicindustries2core.model.RecipeHelpers;
 
 import static nemexlib.api.items.ItemFinder.findItem;
 import static nemexlib.api.items.ItemFinder.findItemTC;
@@ -37,7 +38,7 @@ public class ForbiddenMagicCompat extends ACompat {
         ItemStack crystalWell = findItem(mod, "Crystalwell"),
                 balancedShard = findItemTC("ItemShard", 6);
         // Removing recipe for Crystal Well
-        new ArcaneRemover(2, ThaumcraftApi.getCraftingRecipes(), ForbiddenResearch.recipes.values()).removeItem(crystalWell);
+        RecipeHelpers.arcaneRemover.setRegistries(ThaumcraftApi.getCraftingRecipes(), ForbiddenResearch.recipes.values()).removeItem(crystalWell);
         // Replacing the page with Infusion recipe
         InfusionRecipe recipe = InfusionAdder.addInfusion("CRYSTALWELL", 2,
                 new Aspects(10, SENSES, ORDER, WATER),

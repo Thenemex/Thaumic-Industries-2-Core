@@ -12,6 +12,7 @@ import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
 import thaumicindustries2core.config.Config;
+import thaumicindustries2core.model.RecipeHelpers;
 import thaumicindustries2core.model.config.ConfigExpertTweaks;
 import witchinggadgets.common.WGResearch;
 
@@ -46,7 +47,7 @@ public class WitchingGadgetsCompat extends ACompat {
                 bellows = findItemTC("blockWoodenDevice"),
                 feather = new ItemStack(Items.feather);
         // Removing recipe for Seraph Shoulders
-        new InfusionRemover(2, ThaumcraftApi.getCraftingRecipes(), WGResearch.recipeList.values()).removePrecise(seraphShoulders);
+        RecipeHelpers.infusionRemover.setRegistries(ThaumcraftApi.getCraftingRecipes(), WGResearch.recipeList.values()).removePrecise(seraphShoulders);
         // Replacing the page with new recipe
         InfusionRecipe recipe = InfusionAdder.addInfusion("WGBAUBLES", 4,
                 new Aspects(new int[]{60, 40, 30, 20, 15}, FLIGHT, AIR, ORDER, MOTION, GREED),

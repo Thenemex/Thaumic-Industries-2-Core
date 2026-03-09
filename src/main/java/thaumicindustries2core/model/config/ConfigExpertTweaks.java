@@ -16,6 +16,7 @@ import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
 import thaumcraft.common.config.ConfigResearch;
+import thaumicindustries2core.model.RecipeHelpers;
 import thaumicindustries2core.model.events.VanillaFurnaceHandler;
 import thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes;
 
@@ -67,7 +68,7 @@ public class ConfigExpertTweaks {
                 shardOreDict = new ItemStack(itemShard, 1, 32767),
                 goldIngot = new ItemStack(Items.gold_ingot);
         // Removing recipes for Thaumometer
-        WorkbenchRemover.i().removeItem(thaumometer);
+        RecipeHelpers.workbenchRemover.removeItem(thaumometer);
         ConfigResearch.recipes.remove("Thaumometer");
         // Adding the page with Arcane recipe
         IArcaneRecipe[] recipes = new IArcaneRecipe[2]; // ToDo Add boolean config for rotated recipe
