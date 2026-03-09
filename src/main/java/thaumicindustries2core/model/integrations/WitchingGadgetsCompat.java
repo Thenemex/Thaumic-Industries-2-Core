@@ -2,7 +2,6 @@ package thaumicindustries2core.model.integrations;
 
 import nemexlib.api.integrations.ACompat;
 import nemexlib.api.recipes.infusion.InfusionAdder;
-import nemexlib.api.recipes.infusion.InfusionRemover;
 import nemexlib.api.thaumcraft.API;
 import nemexlib.api.thaumcraft.aspects.Aspects;
 import net.minecraft.init.Items;

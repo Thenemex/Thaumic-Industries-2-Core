@@ -2,7 +2,6 @@ package thaumicindustries2core.model.config;
 
 import nemexlib.api.events.WandEventHandler;
 import nemexlib.api.recipes.arcane.ArcaneAdder;
-import nemexlib.api.recipes.workbench.WorkbenchRemover;
 import nemexlib.api.thaumcraft.API;
 import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;

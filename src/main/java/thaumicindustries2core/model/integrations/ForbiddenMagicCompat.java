@@ -3,7 +3,6 @@ package thaumicindustries2core.model.integrations;
 import fox.spiteful.forbidden.ForbiddenResearch;
 import nemexlib.api.integrations.ACompat;
 import nemexlib.api.items.thaumcraft.JarMaker;
-import nemexlib.api.recipes.arcane.ArcaneRemover;
 import nemexlib.api.recipes.infusion.InfusionAdder;
 import nemexlib.api.thaumcraft.API;
 import nemexlib.api.thaumcraft.aspects.Aspects;

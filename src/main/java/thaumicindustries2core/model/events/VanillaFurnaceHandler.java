@@ -11,6 +11,7 @@ import thaumcraft.common.items.wands.ItemWandCasting;
 
 import static thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes.compound;
 
+@SuppressWarnings("SameReturnValue")
 public class VanillaFurnaceHandler extends WandEventHandler {
 
     private static Block[][][] blueprint;
