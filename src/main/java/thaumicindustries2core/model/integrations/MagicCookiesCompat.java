@@ -2,8 +2,10 @@ package thaumicindustries2core.model.integrations;
 
 import nemexlib.api.integrations.ACompat;
 import nemexlib.api.thaumcraft.API;
-import thaumcraft.api.research.ResearchItem;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import thaumicindustries2core.config.Config;
+import thaumicindustries2core.model.RecipeHelpers;
 
 public class MagicCookiesCompat extends ACompat {
 
@@ -17,8 +19,10 @@ public class MagicCookiesCompat extends ACompat {
     }
 
     protected void deleteWoolToStringCrucibleRecipe() {
-        ResearchItem research = API.getResearch(tab, "WOOLTOSTRING");
+        String key = "WOOLTOSTRING";
         // Removing recipe for String
-
+        RecipeHelpers.crucibleRemover.removeItem(new ItemStack(Items.string), key);
+        // Removing research
+        API.removeResearch(tab, key);
     }
 }
