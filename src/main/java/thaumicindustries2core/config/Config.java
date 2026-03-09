@@ -9,7 +9,7 @@ public class Config extends AConfig {
 
     public static boolean scribingTools, thaumometer, vanillaFurnace, boneBow, crystalWell, seraphShoulders;
     public static boolean woolToStringMerge;
-    public static boolean fmEnabled, mcEnabled, tbEnabled, wgEnabled;
+    public static boolean fmEnabled, mcEnabled, tbEnabled, tkEnabled, wgEnabled;
     protected static final String version = "1.6";
 
     public Config(FMLPreInitializationEvent event) {
@@ -34,6 +34,7 @@ public class Config extends AConfig {
         config.addCustomCategoryComment(integrations, "You can turn off/on integrations here");
         fmEnabled = newEntry(integrations, "Forbidden Magic");
         mcEnabled = newEntry(integrations, "Magic Cookies");
+        tkEnabled = newEntry(integrations, "Thaumaturgical Knowledge");
         tbEnabled = newEntry(integrations, "Thaumic Bases");
         wgEnabled = newEntry(integrations, "Witching Gadgets");
     }
