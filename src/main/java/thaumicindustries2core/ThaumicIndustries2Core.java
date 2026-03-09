@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import nemexlib.api.util.Logger;
 import nemexlib.config.AConfig;
 import thaumicindustries2core.config.Config;
+import thaumicindustries2core.model.RecipeHelpers;
 import thaumicindustries2core.model.config.ConfigExpertTweaks;
 import thaumicindustries2core.model.config.ConfigIntegrations;
 import thaumicindustries2core.model.config.ConfigRecipeMerges;
@@ -32,6 +33,8 @@ public class ThaumicIndustries2Core{
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent ignoredEvent) {
+        // Instanciating recipe helpers
+        RecipeHelpers.init();
         // Loading Integrations
         ConfigIntegrations.init();
         // Loading recipe changes
@@ -40,5 +43,5 @@ public class ThaumicIndustries2Core{
         ConfigRecipeMerges.init();
     }
 
-    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.6,);after:ForbiddenMagic;after:tc4tweak;after:WitchingGadgets;after:TC4Patched";
+    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.7,);after:ForbiddenMagic;after:MagicCookie;after:tc4tweak;after:TC4Patched;after:WitchingGadgets";
 }
