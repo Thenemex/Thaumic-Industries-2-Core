@@ -16,13 +16,20 @@ public class ThaumicBasesCompat extends ACompat {
     @Override
     public void loadIntegration() {
         if (Config.woolToStringMerge) deleteWoolToStringCrucibleRecipe();
+        if (Config.redstoneDupeMerge) deleteRestoneDupeCrucibleRecipe();
     }
 
     protected void deleteWoolToStringCrucibleRecipe() {
         String key1 = "TB.AdvancedEntropy", key2 = "TB.MasterEntropy";
-        RecipeHelpers.crucibleRemover.removeItem(new ItemStack(Items.string), key1);
+        ItemStack string = new ItemStack(Items.string);
+        RecipeHelpers.crucibleRemover.removeItem(string, key1);
         API.removePage(tab, key1, 2);
-        RecipeHelpers.crucibleRemover.removeItem(new ItemStack(Items.string), key2);
+        RecipeHelpers.crucibleRemover.removeItem(string, key2);
         API.removePage(tab, key2, 2);
+    }
+    protected void deleteRestoneDupeCrucibleRecipe() {
+        String key = "TB.SimpleDublication"; // What the typo
+        RecipeHelpers.crucibleRemover.removeItem(new ItemStack(Items.redstone), key);
+        API.removePage(tab, key, 4);
     }
 }

@@ -27,7 +27,6 @@ public class ConfigRecipeMerges {
                 new ItemStack(Items.redstone));
         API.addPage(research, new ResearchPage(recipe), 7);
     }
-    // ToDo Remove rest of recipes
     protected static void mergeCrucibleWoolToString() {
         ResearchItem research = API.getResearch("ALCHEMY", "ENTROPICPROCESSING");
         CrucibleRecipe recipe = CrucibleAdder.addRecipe(research.key,

@@ -16,11 +16,17 @@ public class ThaumaturgicalKnowledgeCompat extends ACompat {
     @Override
     public void loadIntegration() {
         if (Config.woolToStringMerge) deleteWoolToStringCrucibleRecipe();
+        if (Config.redstoneDupeMerge) deleteRestoneDupeCrucibleRecipe();
     }
 
     protected void deleteWoolToStringCrucibleRecipe() {
         String key = "ENT";
         RecipeHelpers.crucibleRemover.removeItem(new ItemStack(Items.string), key);
+        API.removePage(tab, key, 5);
+    }
+    protected void deleteRestoneDupeCrucibleRecipe() {
+        String key = "DUPE";
+        RecipeHelpers.crucibleRemover.removeItem(new ItemStack(Items.redstone), key);
         API.removePage(tab, key, 5);
     }
 }
