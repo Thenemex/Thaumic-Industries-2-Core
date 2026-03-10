@@ -12,6 +12,8 @@ A config file is also present for turning off/on everything you want or don't wa
   - Added a new expert arcane recipe for Bone Bow
   - Added a new expert infusion recipe for Seraph's Shoulders
 
+  - Unified Crucible recipes under Alchemy tab for :
+    - Wool to String, Redstone Dupe
 
   - Replaced all research pages associated with those recipes
   - Added compatibility with damaged tools for expert recipes
