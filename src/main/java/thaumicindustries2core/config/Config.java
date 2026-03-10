@@ -10,6 +10,8 @@ public class Config extends AConfig {
     public static boolean scribingTools, thaumometer, vanillaFurnace, boneBow, crystalWell, seraphShoulders;
     public static boolean woolToStringMerge;
     public static boolean fmEnabled, mcEnabled, tbEnabled, tkEnabled, wgEnabled;
+    public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio;
+    public static int woolToString_stringAmount;
     protected static final String version = "1.6";
 
     public Config(FMLPreInitializationEvent event) {
@@ -29,6 +31,9 @@ public class Config extends AConfig {
         String recipeMerges = "Recipe-Merges";
         config.addCustomCategoryComment(recipeMerges, "You can tweak off/on recipe merges here");
         woolToStringMerge = newEntry(recipeMerges, "Wool -> String", "Delete all 4 additionnal recipes, and add one under Alchemy / Entropic Process");
+        woolToString_Aspect_Fabrico = newEntry(recipeMerges, "Wool -> String : Aspect - Fabrico", 1, 1, 64, null);
+        woolToString_Aspect_Perditio = newEntry(recipeMerges, "Wool -> String : Aspect - Perditio", 1, 1, 64, null);
+        woolToString_stringAmount = newEntry(recipeMerges, "Wool -> String : Output - String", 4, 1, 64, null);
 
         String integrations = "Mod-Integrations";
         config.addCustomCategoryComment(integrations, "You can turn off/on integrations here");
