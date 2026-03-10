@@ -15,9 +15,19 @@ import thaumicindustries2core.config.Config;
 public class ConfigRecipeMerges {
 
     public static void init() {
+        if (Config.redstoneDupeMerge) mergeRedstoneDupe();
         if (Config.woolToStringMerge) mergeCrucibleWoolToString();
     }
 
+    protected static void mergeRedstoneDupe() {
+        ResearchItem research = API.getResearch("ALCHEMY", "ALCHEMICALDUPLICATION");
+        CrucibleRecipe recipe = CrucibleAdder.addRecipe(research.key,
+                new Aspects(new int[]{Config.redstoneDupe_Aspect_Machina, Config.redstoneDupe_Aspect_Potentia}, Aspect.MECHANISM, Aspect.ENERGY),
+                new ItemStack(Items.redstone, Config.redstoneDupe_outputAmount),
+                new ItemStack(Items.redstone));
+        API.addPage(research, new ResearchPage(recipe), 7);
+    }
+    // ToDo Remove rest of recipes
     protected static void mergeCrucibleWoolToString() {
         ResearchItem research = API.getResearch("ALCHEMY", "ENTROPICPROCESSING");
         CrucibleRecipe recipe = CrucibleAdder.addRecipe(research.key,
