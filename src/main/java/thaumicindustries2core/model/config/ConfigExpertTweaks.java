@@ -78,7 +78,7 @@ public class ConfigExpertTweaks {
                 new ItemStack(Items.fish, 1, 2), // Clownfish
                 new ItemStack(itemShard, 1, 2), // Water Shard
                 new ItemStack(Items.fish, 1, 3), // Pufferfish
-                EnchantedBookMaker.make((short) 1, (short) 6), // Book : Aqua Affinity I
+                EnchantedBookMaker.make(1, 6), // Book : Aqua Affinity I
                 new ItemStack(Items.fish, 1, 1) // Raw Salmon
         );
         API.replacePage(research, new ResearchPage(recipe), 2);
