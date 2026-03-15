@@ -16,7 +16,7 @@ import static thaumicindustries2core.ThaumicIndustries2Core.dependencies;
 import static thaumicindustries2core.ThaumicIndustries2Core.modID;
 
 @SuppressWarnings({"unused", "EmptyMethod"})
-@Mod(modid = modID, useMetadata = true, version = "1.6.1", dependencies = dependencies)
+@Mod(modid = modID, useMetadata = true, version = "1.6.1.1", dependencies = dependencies)
 public class ThaumicIndustries2Core{
 
     public static final String modID = "TCI2Core", modName = "ThaumicIndustries2Core";
@@ -43,5 +43,5 @@ public class ThaumicIndustries2Core{
         ConfigRecipeMerges.init();
     }
 
-    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.8,);after:benway_knowledge;after:ForbiddenMagic;after:MagicCookie;after:thaumicbases;after:TC4Patched;after:tc4tweak;after:WitchingGadgets";
+    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.8.1,);after:benway_knowledge;after:ForbiddenMagic;after:MagicCookie;after:thaumicbases;after:TC4Patched;after:tc4tweak;after:WitchingGadgets";
 }
