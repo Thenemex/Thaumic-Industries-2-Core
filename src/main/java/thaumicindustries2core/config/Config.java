@@ -7,12 +7,12 @@ import static thaumicindustries2core.ThaumicIndustries2Core.modName;
 
 public class Config extends AConfig {
 
-    public static boolean scribingTools, thaumometer, vanillaFurnace, boneBow, crystalWell, seraphShoulders;
+    public static boolean boneBow, golemCoreFishing, scribingTools, thaumometer, vanillaFurnace, crystalWell, seraphShoulders;
     public static boolean redstoneDupeMerge, woolToStringMerge;
     public static boolean fmEnabled, mcEnabled, tbEnabled, tkEnabled, wgEnabled;
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
     public static int redstoneDupe_Aspect_Machina, redstoneDupe_Aspect_Potentia, redstoneDupe_outputAmount;
-    protected static final String version = "1.6";
+    protected static final String version = "1.7";
 
     public Config(FMLPreInitializationEvent event) {
         super(event, modName, modName, version);
@@ -22,10 +22,11 @@ public class Config extends AConfig {
         String expert = "Expert-Tweaks";
         config.addCustomCategoryComment(expert, "You can tweak off/on expert changes here");
         {
+            boneBow = newEntry(expert, "BoneBow", "Sets a new arcane recipe with harder components");
+            golemCoreFishing = newEntry(expert, "GolemCoreFishing", "Sets a new infusion recipe with harder and special components");
             scribingTools = newEntry(expert, "ScribingTools", "Sets a new arcane recipe, that will only accept TC4 Phials and not empty bottles");
             thaumometer = newEntry(expert, "Thaumometer", "Sets a new arcane recipe using some vis");
             vanillaFurnace = newEntry(expert, "VanillaFurnace", "Adds a mystical construct recipe for the vanilla furnace, and adds another one with arcane stone");
-            boneBow = newEntry(expert, "BoneBow", "Sets a new arcane recipe with harder components");
             crystalWell = newEntry(expert, "CrystalScribingTools", "Sets a new infusion recipe with harder components");
             seraphShoulders = newEntry(expert, "SeraphShoulders", "Sets a new infusion recipe with arcane bellows and more essentia"); }
 
