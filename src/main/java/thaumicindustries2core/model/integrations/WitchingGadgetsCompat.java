@@ -13,6 +13,7 @@ import thaumcraft.api.research.ResearchPage;
 import thaumicindustries2core.config.Config;
 import thaumicindustries2core.model.RecipeHelpers;
 import thaumicindustries2core.model.config.ConfigExpertTweaks;
+import witchinggadgets.common.WGContent;
 import witchinggadgets.common.WGResearch;
 
 import static nemexlib.api.items.ItemFinder.findItem;
@@ -33,7 +34,7 @@ public class WitchingGadgetsCompat extends ACompat {
     }
 
     protected void addYarnToExpertBoneBow() {
-        ConfigExpertTweaks.specialString = findItem(mod, "item.WG_Material");
+        ConfigExpertTweaks.specialString = new ItemStack(WGContent.ItemMaterial, 1, 0);
     }
 
     protected void loadExpertSeraphShoulders_INFUSION() {
@@ -41,7 +42,7 @@ public class WitchingGadgetsCompat extends ACompat {
         // Adding Arcane Bellows as prereq
         API.addParents(research, true, "BELLOWS");
         // Naming items
-        ItemStack seraphShoulders = findItem(mod, "item.WG_Baubles", 0),
+        ItemStack seraphShoulders = new ItemStack(WGContent.ItemMagicalBaubles, 1, 0),
                 airShard = findItemTC("ItemShard"),
                 bellows = findItemTC("blockWoodenDevice"),
                 feather = new ItemStack(Items.feather);
