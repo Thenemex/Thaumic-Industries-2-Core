@@ -1,5 +1,6 @@
 package thaumicindustries2core.model.research;
 
+import nemexlib.api.recipes.arcane.ArcaneAdder;
 import nemexlib.api.recipes.mystical.CompoundAdder;
 import nemexlib.api.recipes.workbench.WorkbenchAdder;
 import nemexlib.api.recipes.workbench.WorkbenchRemover;
@@ -7,9 +8,10 @@ import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
 import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.research.ResearchPage;
+import thaumcraft.common.config.ConfigBlocks;
 
 import java.util.List;
 
@@ -34,12 +36,17 @@ public class VanillaFurnaceCompoundRecipes extends AResearch {
                 new ResearchPage(addArcaneRecipeFurnace()));
     }
 
-    protected IRecipe addArcaneRecipeFurnace() {
-        ItemStack furnace = new ItemStack(Blocks.furnace);
+    protected IArcaneRecipe addArcaneRecipeFurnace() {
+        ItemStack furnace = new ItemStack(Blocks.furnace, 2);
         // Remove vanilla recipe
         WorkbenchRemover.i().removeItem(furnace);
-        // Adds a vanilla recipe from arcane stone
-        return WorkbenchAdder.addRecipe(furnace, false, "SSS", "S S", "SSS", 'S', findItemTC("blockCosmeticSolid", 6));
+        // Adds an arcane recipe from arcane stone
+        return ArcaneAdder.addArcane(tag,
+                new Aspects(new Aspect[]{EARTH, ENTROPY, FIRE}, 6, 6, 3),
+                false, false, furnace,
+                "SBS", "B B", "SBS",
+                'S', new ItemStack(ConfigBlocks.blockCosmeticSolid, 1, 6),  // Arcane Stone Block
+                'B', new ItemStack(ConfigBlocks.blockCosmeticSolid, 1, 7));
     }
 
     protected List addCompoundRecipeFurnace() {
