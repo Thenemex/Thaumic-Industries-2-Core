@@ -7,6 +7,7 @@ import static thaumicindustries2core.ThaumicIndustries2Core.modName;
 
 public class Config extends AConfig {
 
+    public static boolean buggedRecipePatch;
     public static boolean boneBow, golemCoreFishing, scribingTools, thaumometer, vanillaFurnace, crystalWell, seraphShoulders;
     public static boolean redstoneDupeMerge, woolToStringMerge;
     public static boolean fmEnabled, mcEnabled, tbEnabled, tkEnabled, wgEnabled;
@@ -19,6 +20,11 @@ public class Config extends AConfig {
     }
 
     protected void loadConfig() {
+        String bugPatches = "Bug-Patches";
+        config.addCustomCategoryComment(bugPatches, "You can tweak off/on bug patches here");
+        {
+            buggedRecipePatch = newEntry(bugPatches, "BuggedRecipePatch", "Removes all recipes that got a Null item set as output"); }
+
         String expert = "Expert-Tweaks";
         config.addCustomCategoryComment(expert, "You can tweak off/on expert changes here");
         {

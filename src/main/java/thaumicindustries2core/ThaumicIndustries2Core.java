@@ -8,6 +8,7 @@ import nemexlib.api.util.Logger;
 import nemexlib.config.AConfig;
 import thaumicindustries2core.config.Config;
 import thaumicindustries2core.model.RecipeHelpers;
+import thaumicindustries2core.model.config.ConfigBugPatches;
 import thaumicindustries2core.model.config.ConfigExpertTweaks;
 import thaumicindustries2core.model.config.ConfigIntegrations;
 import thaumicindustries2core.model.config.ConfigRecipeMerges;
@@ -16,7 +17,7 @@ import static thaumicindustries2core.ThaumicIndustries2Core.dependencies;
 import static thaumicindustries2core.ThaumicIndustries2Core.modID;
 
 @SuppressWarnings({"unused", "EmptyMethod"})
-@Mod(modid = modID, useMetadata = true, version = "1.6.2", dependencies = dependencies)
+@Mod(modid = modID, useMetadata = true, version = "1.7", dependencies = dependencies)
 public class ThaumicIndustries2Core{
 
     public static final String modID = "TCI2Core", modName = "ThaumicIndustries2Core";
@@ -41,6 +42,8 @@ public class ThaumicIndustries2Core{
         ConfigExpertTweaks.init();
         // Loading recipe merges
         ConfigRecipeMerges.init();
+        // Loading bug patches
+        ConfigBugPatches.init();
     }
 
     public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.8.1,);after:benway_knowledge;after:ForbiddenMagic;after:MagicCookie;after:thaumicbases;after:TC4Patched;after:tc4tweak;after:WitchingGadgets";
