@@ -17,3 +17,6 @@ mod_research_name.VANILLAFURNACE=Stone Furnace
 mod_research_text.VANILLAFURNACE=It burns !
 mod_research_page.VANILLAFURNACE.1=After some struggles on your first steps through this world, you finally discover how to smelt items like your ancestors did.<LINE>You will need the sufficient amount of vis in your wand, then sneak and hit the coal block with it to transform the construct to a stone furnace !
 #
+mod_research_name.ALTERNATIVEVISFILTER=Alternative Filter
+mod_research_text.ALTERNATIVEVISFILTER=Too lazy for finding Silverwood ?
+mod_research_page.ALTERNATIVEVISFILTER.1=You explored miles and miles of land, without ever finding that legendary white tree ... Or maybe you didn't ? <LINE> In your sleepless night out there in the wild, you actually thought of an insane way of faking a replicate of a Silverwood plank by using a composition of different shiny metals <BR> Faking thaumaturgy basic elements is almost impossible, so you will need a crazy amount of Ordo to sharpen any bad lines on that fake birch plank !

@@ -13,6 +13,7 @@ public class Config extends AConfig {
     public static boolean fmEnabled, mcEnabled, tbEnabled, tkEnabled, wgEnabled;
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
     public static int redstoneDupe_Aspect_Machina, redstoneDupe_Aspect_Potentia, redstoneDupe_outputAmount;
+    public static boolean alternativeVisFilter;
     protected static final String version = "1.7";
 
     public Config(FMLPreInitializationEvent event) {
@@ -59,5 +60,10 @@ public class Config extends AConfig {
             tkEnabled = newEntry(integrations, "Thaumaturgical Knowledge");
             tbEnabled = newEntry(integrations, "Thaumic Bases");
             wgEnabled = newEntry(integrations, "Witching Gadgets"); }
+
+        String tcieFeatures = "TCIe-Features";
+        config.addCustomCategoryComment(tcieFeatures, "You can turn off/on special features made for the modpack Thaumic Industries");
+        {
+            alternativeVisFilter = newEntry(tcieFeatures, "Alternative Vis Filter", "Adds a new research and arcane recipe for Vis Filter"); }
     }
 }
