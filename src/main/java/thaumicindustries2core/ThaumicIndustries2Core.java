@@ -8,10 +8,7 @@ import nemexlib.api.util.Logger;
 import nemexlib.config.AConfig;
 import thaumicindustries2core.config.Config;
 import thaumicindustries2core.model.RecipeHelpers;
-import thaumicindustries2core.model.config.ConfigBugPatches;
-import thaumicindustries2core.model.config.ConfigExpertTweaks;
-import thaumicindustries2core.model.config.ConfigIntegrations;
-import thaumicindustries2core.model.config.ConfigRecipeMerges;
+import thaumicindustries2core.model.config.*;
 
 import static thaumicindustries2core.ThaumicIndustries2Core.dependencies;
 import static thaumicindustries2core.ThaumicIndustries2Core.modID;
@@ -36,10 +33,12 @@ public class ThaumicIndustries2Core{
     public void postInit(FMLPostInitializationEvent ignoredEvent) {
         // Instanciating recipe helpers
         RecipeHelpers.init();
-        // Loading Integrations
+        // Loading integrations
         ConfigIntegrations.init();
-        // Loading recipe changes
+        // Loading expert recipe changes
         ConfigExpertTweaks.init();
+        // Loading tcie features
+        ConfigModpackFeatures.init();
         // Loading recipe merges
         ConfigRecipeMerges.init();
         // Loading bug patches

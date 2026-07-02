@@ -2,7 +2,6 @@ package thaumicindustries2core.model.research;
 
 import nemexlib.api.recipes.arcane.ArcaneAdder;
 import nemexlib.api.recipes.mystical.CompoundAdder;
-import nemexlib.api.recipes.workbench.WorkbenchAdder;
 import nemexlib.api.recipes.workbench.WorkbenchRemover;
 import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;
@@ -15,7 +14,6 @@ import thaumcraft.common.config.ConfigBlocks;
 
 import java.util.List;
 
-import static nemexlib.api.items.ItemFinder.findItemTC;
 import static thaumcraft.api.aspects.Aspect.*;
 
 @SuppressWarnings("rawtypes")
@@ -30,7 +28,7 @@ public class VanillaFurnaceCompoundRecipes extends AResearch {
 
     @Override
     public void init() {
-        this.setResearchAspects(new Aspect[]{FIRE, ENTROPY, EARTH}, 2, 6, 6);
+        this.setResearchAspects(new Aspects(0, 2, 0, 6, 0, 6));
         this.setNewResearch(0, -5).setPages(newTextPage(1),
                 new ResearchPage(addCompoundRecipeFurnace()),
                 new ResearchPage(addArcaneRecipeFurnace()));
@@ -42,7 +40,7 @@ public class VanillaFurnaceCompoundRecipes extends AResearch {
         WorkbenchRemover.i().removeItem(furnace);
         // Adds an arcane recipe from arcane stone
         return ArcaneAdder.addArcane(tag,
-                new Aspects(new Aspect[]{EARTH, ENTROPY, FIRE}, 6, 6, 3),
+                new Aspects(0, 3, 0, 6, 0, 6),
                 false, false, furnace,
                 "SBS", "B B", "SBS",
                 'S', new ItemStack(ConfigBlocks.blockCosmeticSolid, 1, 6),  // Arcane Stone Block
