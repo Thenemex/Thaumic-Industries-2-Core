@@ -127,6 +127,10 @@ public class ConfigExpertTweaks {
         VanillaFurnaceHandler.initBlueprint();
         vanillaFurnaceHandler = new VanillaFurnaceHandler();
         // Loading the research
-        researchMap.put(VanillaFurnaceCompoundRecipes.tag, new VanillaFurnaceCompoundRecipes());
+        put(new VanillaFurnaceCompoundRecipes());
+    }
+
+    public static void put(AResearch research) {
+        researchMap.put(research.getTag(), research);
     }
 }
