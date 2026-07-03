@@ -12,12 +12,14 @@ A config file is also present for turning off/on everything you want or don't wa
   - Added a new expert arcane recipe for Bone Bow
   - Added a new expert infusion recipe for Golem Core : Fishing
   - Added a new expert infusion recipe for Seraph's Shoulders
+  - Added an alternative arcane recipe for Vis Filter
 
   - Unified Crucible recipes under Alchemy tab for :
     - Wool to String, Redstone Dupe
 
   - Replaced all research pages associated with those recipes
   - Added compatibility with damaged tools for expert recipes
+  - Added compatibility with most modded axes for Garden Trees's post recipes
 
 ### Required mods :
 This mod requires to have Thaumcraft 4 and NemexLib installed to be able to run.
