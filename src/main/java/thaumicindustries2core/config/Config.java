@@ -2,8 +2,7 @@ package thaumicindustries2core.config;
 
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import nemexlib.config.AConfig;
-
-import static thaumicindustries2core.ThaumicIndustries2Core.modName;
+import thaumicindustries2core.ThaumicIndustries2Core;
 
 public class Config extends AConfig {
 
@@ -14,10 +13,10 @@ public class Config extends AConfig {
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
     public static int redstoneDupe_Aspect_Machina, redstoneDupe_Aspect_Potentia, redstoneDupe_outputAmount;
     public static boolean alternativeVisFilter;
-    protected static final String version = "1.7";
+    protected static final String version = "1.8";
 
     public Config(FMLPreInitializationEvent event) {
-        super(event, modName, modName, version);
+        super(ThaumicIndustries2Core.modName, event, version);
     }
 
     protected void loadConfig() {
