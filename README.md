@@ -1,4 +1,4 @@
-# Core mod for my modpack Thaumic Industries 2 - Expert
+# Core mod for my modpack Thaumic Industries
 I added here tweaks that don't really fit well in my other mods, tweaks that are unique to the expert side of the pack.
 
 A config file is also present for turning off/on everything you want or don't want.
