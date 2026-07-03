@@ -10,7 +10,7 @@ public class Config extends AConfig {
     public static boolean buggedRecipePatch;
     public static boolean boneBow, golemCoreFishing, scribingTools, thaumometer, vanillaFurnace, crystalWell, seraphShoulders;
     public static boolean redstoneDupeMerge, woolToStringMerge;
-    public static boolean fmEnabled, mcEnabled, tbEnabled, tkEnabled, wgEnabled;
+    public static boolean fmEnabled, gtEnabled, mcEnabled, tbEnabled, tkEnabled, wgEnabled;
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
     public static int redstoneDupe_Aspect_Machina, redstoneDupe_Aspect_Potentia, redstoneDupe_outputAmount;
     public static boolean alternativeVisFilter;
@@ -56,6 +56,7 @@ public class Config extends AConfig {
         config.addCustomCategoryComment(integrations, "You can turn off/on integrations here");
         {
             fmEnabled = newEntry(integrations, "Forbidden Magic");
+            gtEnabled = newEntry(integrations, "Garden Trees");
             mcEnabled = newEntry(integrations, "Magic Cookies");
             tkEnabled = newEntry(integrations, "Thaumaturgical Knowledge");
             tbEnabled = newEntry(integrations, "Thaumic Bases");
