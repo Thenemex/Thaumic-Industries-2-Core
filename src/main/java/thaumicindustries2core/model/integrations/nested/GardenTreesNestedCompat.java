@@ -19,7 +19,7 @@ public class GardenTreesNestedCompat extends ACompat {
 
     @Override
     public void loadIntegration() {
-        // Thaumcraft (Thaumium - Enhanced Thaumium - Voidmetal)
+        // Thaumcraft (Thaumium, Enhanced Thaumium, Voidmetal)
         add(ConfigItems.itemAxeThaumium, ConfigItems.itemAxeElemental, ConfigItems.itemAxeVoid);
         // Forbidden Magic (Chameleon)
         if (Loader.isModLoaded(fm)) add(ForbiddenItems.morphAxe);
@@ -29,9 +29,19 @@ public class GardenTreesNestedCompat extends ACompat {
         if (Loader.isModLoaded(wg)) add(WGContent.ItemPrimordialAxe);
         // Thaumic Bases (Thauminite)
         add(tb, "thauminiteAxe");
-        // Thaumic Tinkerer (Ichorium + Awakened Ichorium)
-        // add(tt, "ichorAxe", "ichorAxeGem"); // ToDo Check how to simulate durability on Ichor + add on after: load
-
+        // Thaumic Tinkerer (Ichorium, Awakened Ichorium)
+        // add(tt, "ichorAxe", "ichorAxeGem");
+        // Twilight Forest (Steeleaf, Knightly, Ironwood, Minotaur)
+        add(tw, "item.steeleafAxe", "item.knightlyAxe", "item.ironwoodAxe", "item.minotaurAxe");
+        // Blood Magic (Bound)
+        add(bm, "boundAxe");
+        // Blood Arsenal (Blood Infused Wood/Iron/Diamond)
+        // add(ba, "blood_infused_axe_wood", "blood_infused_axe_iron", "blood_infused_axe_diamond");
+        // Sanguimancy (Corrupted)
+        // add(sg, "corruptedAxe");
+        // Botania (Manasteel, Elementium, Terra)
+        add(bt, "manasteelAxe", "elementiumAxe", "terraAxe");
+        // ToDo Check how to simulate durability + add on after: load
     }
 
     public static void add(Item axe) {

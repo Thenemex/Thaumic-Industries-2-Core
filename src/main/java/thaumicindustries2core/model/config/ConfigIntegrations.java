@@ -9,12 +9,17 @@ import static nemexlib.api.integrations.ACompat.isModLoaded;
 public class ConfigIntegrations {
 
     public static final String fm = "ForbiddenMagic",
+            // ba = "BloodArsenal",
+            bm = "AWWayofTime",
+            bt = "Botania",
             gt = "GardenTrees",
             mc = "MagicCookie",
+            // sg = "Sanguimancy",
             tb = "thaumicbases",
             tk = "benway_knowledge",
             tm = "TaintedMagic",
-            tt = "ThaumicTinkerer",
+            // tt = "ThaumicTinkerer",
+            tw = "TwilightForest",
             wg = "WitchingGadgets";
 
     public static void init() {
