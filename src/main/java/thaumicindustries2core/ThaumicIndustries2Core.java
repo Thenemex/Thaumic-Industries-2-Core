@@ -45,5 +45,15 @@ public class ThaumicIndustries2Core{
         ConfigBugPatches.init();
     }
 
-    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);required-after:NemexLib@[1.11.1,);after:benway_knowledge;after:ForbiddenMagic;after:GardenTrees;after:MagicCookie;after:thaumicbases;after:TC4Patched;after:tc4tweak;after:WitchingGadgets";
+    public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);" +
+            "required-after:NemexLib@[1.11.1,);" +
+            "after:benway_knowledge;" +
+            "after:ForbiddenMagic;" +
+            "after:MagicCookie;" +
+            "after:TaintedMagic;" +
+            "after:thaumicbases;" +
+            "after:TC4Patched;" +
+            "after:tc4tweak;" +
+            "after:WitchingGadgets;" +
+            "before:GardenTrees";
 }
