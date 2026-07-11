@@ -22,7 +22,5 @@ public class ThaumicTinkererCompat extends ACompat {
         RecipeHelpers.infusionRemover.removeItem(ItemFinder.findItem(mod, "focusDislocation"));
         // Removing the associated research
         API.removeResearch(tab, "FOCUS_DISLOCATION");
-        // Removing the bugged null element from Ichor parents
-        // ToDo Remove null tag from Ichor parentsHidden
     }
 }
