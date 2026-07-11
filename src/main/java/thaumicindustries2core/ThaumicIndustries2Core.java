@@ -54,6 +54,7 @@ public class ThaumicIndustries2Core{
             "after:thaumicbases;" +
             "after:TC4Patched;" +
             "after:tc4tweak;" +
+            "after:ThaumicTinkerer;" +
             "after:WitchingGadgets;" +
             "before:GardenTrees";
 }

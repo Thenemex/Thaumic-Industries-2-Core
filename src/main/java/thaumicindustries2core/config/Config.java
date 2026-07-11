@@ -9,9 +9,10 @@ public class Config extends AConfig {
     public static boolean buggedRecipePatch;
     public static boolean boneBow, golemCoreFishing, scribingTools, thaumometer, vanillaFurnace, crystalWell, seraphShoulders;
     public static boolean redstoneDupeMerge, woolToStringMerge;
-    public static boolean fmEnabled, gtEnabled, mcEnabled, tbEnabled, tkEnabled, wgEnabled;
+    public static boolean fmEnabled, gtEnabled, mcEnabled, tbEnabled, tkEnabled, ttEnabled, wgEnabled;
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
     public static int redstoneDupe_Aspect_Machina, redstoneDupe_Aspect_Potentia, redstoneDupe_outputAmount;
+    public static boolean removeDislocationFocus;
     public static boolean alternativeVisFilter;
     protected static final String version = "1.8";
 
@@ -20,13 +21,12 @@ public class Config extends AConfig {
     }
 
     protected void loadConfig() {
-        String bugPatches = "Bug-Patches";
-        config.addCustomCategoryComment(bugPatches, "You can tweak off/on bug patches here");
+        String bugPatches = "Bug-Patches", expert = "Expert-Tweaks", recipeMerges = "Recipe-Merges", removals = "Removals", integrations = "Mod-Integrations", tcieFeatures = "TCIe-Features";;
+        comment(bugPatches, "You can tweak off/on bug patches here");
         {
             buggedRecipePatch = newEntry(bugPatches, "BuggedRecipePatch", "Removes all recipes that got a Null item set as output"); }
 
-        String expert = "Expert-Tweaks";
-        config.addCustomCategoryComment(expert, "You can tweak off/on expert changes here");
+        comment(expert, "You can tweak off/on expert changes here");
         {
             boneBow = newEntry(expert, "BoneBow", "Sets a new arcane recipe with harder components");
             golemCoreFishing = newEntry(expert, "GolemCoreFishing", "Sets a new infusion recipe with harder and special components");
@@ -36,8 +36,7 @@ public class Config extends AConfig {
             crystalWell = newEntry(expert, "CrystalScribingTools", "Sets a new infusion recipe with harder components");
             seraphShoulders = newEntry(expert, "SeraphShoulders", "Sets a new infusion recipe with arcane bellows and more essentia"); }
 
-        String recipeMerges = "Recipe-Merges";
-        config.addCustomCategoryComment(recipeMerges, "You can tweak off/on recipe merges here");
+        comment(recipeMerges, "You can tweak off/on recipe merges here");
         // Redstone dupe
         {
             redstoneDupeMerge = newEntry(recipeMerges, "Redstone -> Redstone", "Delete the 2 additionnal recipes, and add one under Alchemy / Alchemical Duplication");
@@ -51,18 +50,22 @@ public class Config extends AConfig {
             woolToString_Aspect_Perditio = newEntry(recipeMerges, "Wool -> String : Aspect - Perditio", 1, 1, 64, null);
             woolToString_stringAmount = newEntry(recipeMerges, "Wool -> String : Output - String", 4, 1, 64, null); }
 
-        String integrations = "Mod-Integrations";
-        config.addCustomCategoryComment(integrations, "You can turn off/on integrations here");
+        comment(removals, "You can turn off/on removals here");
+        {
+            removeDislocationFocus = newEntry(removals, "RemoveDislocationFocus", "Removes research/recipe for Wand Focus : Dislocation ; and cleans off any Ichor prereq leftover");
+        }
+        
+        comment(integrations, "You can turn off/on integrations here");
         {
             fmEnabled = newEntry(integrations, "Forbidden Magic");
             gtEnabled = newEntry(integrations, "Garden Trees");
             mcEnabled = newEntry(integrations, "Magic Cookies");
-            tkEnabled = newEntry(integrations, "Thaumaturgical Knowledge");
             tbEnabled = newEntry(integrations, "Thaumic Bases");
+            tkEnabled = newEntry(integrations, "Thaumaturgical Knowledge");
+            ttEnabled = newEntry(integrations, "Thaumic Tinkerer");
             wgEnabled = newEntry(integrations, "Witching Gadgets"); }
 
-        String tcieFeatures = "TCIe-Features";
-        config.addCustomCategoryComment(tcieFeatures, "You can turn off/on special features made for the modpack Thaumic Industries");
+        comment(tcieFeatures, "You can turn off/on special features made for the modpack Thaumic Industries");
         {
             alternativeVisFilter = newEntry(tcieFeatures, "Alternative Vis Filter", "Adds a new research and arcane recipe for Vis Filter"); }
     }
