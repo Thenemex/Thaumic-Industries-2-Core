@@ -13,8 +13,8 @@ public class Config extends AConfig {
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
     public static int redstoneDupe_Aspect_Machina, redstoneDupe_Aspect_Potentia, redstoneDupe_outputAmount;
     public static boolean removeDislocationFocus;
-    public static boolean alternativeVisFilter;
-    public static int alternativeVisFilter_outputAmount;
+    public static boolean alternativeVisFilter, alternativeCompoundLeather;
+    public static int alternativeVisFilter_outputAmount, alternativeCompoundLeather_outputAmount;
     protected static final String version = "1.9";
 
     public Config(FMLPreInitializationEvent event) {
@@ -67,9 +67,14 @@ public class Config extends AConfig {
             wgEnabled = newEntry(integrations, "Witching Gadgets"); }
 
         comment(tcieFeatures, "You can turn off/on special features made for the modpack Thaumic Industries");
+        // Alternative Vis Filter
         {
             alternativeVisFilter = newEntry(tcieFeatures, "Alternative Vis Filter", "Adds a new research and arcane recipe for Vis Filter");
-            alternativeVisFilter_outputAmount = newEntry(tcieFeatures, "Alternative Vis Filter : Output", 1, 1, 64);
+            alternativeVisFilter_outputAmount = newEntry(tcieFeatures, "Alternative Vis Filter : Output", 1, 1, 64); }
+        // Alternative Compound Leather
+        {
+            alternativeCompoundLeather = newEntry(tcieFeatures, "Alternative Leather", "Adds a new research and a mystical construct recipe for turning a block of flesh into some leather");
+            alternativeCompoundLeather_outputAmount = newEntry(tcieFeatures, "Alternative Leather : Output", 1, 1, 64);
         }
     }
 }
