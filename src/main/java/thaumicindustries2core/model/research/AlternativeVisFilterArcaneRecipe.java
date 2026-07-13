@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.research.ResearchPage;
+import thaumicindustries2core.config.Config;
 
 import static thaumcraft.api.aspects.Aspect.*;
 import static thaumcraft.common.config.ConfigBlocks.*;
@@ -31,12 +32,12 @@ public class AlternativeVisFilterArcaneRecipe extends AResearch {
         return ArcaneAdder.addArcane(tag,
                 new Aspects(20, 0, 0, 0, 55, 10),
                 false, false,
-                new ItemStack(blockWoodenDevice, 0, 7), // Silverwood Plank
+                new ItemStack(blockWoodenDevice, Config.alternativeVisFilter_outputAmount, 7), // Silverwood Plank
                 "SMS", "QBQ", "SMS",
                 'S', "nuggetSilver", // Silver Nugget
-                'M', new ItemStack(itemResource, 0, 10), // Mirrored Glass
-                'Q', new ItemStack(itemNugget, 0, 5), // Quicksilver Nugget
-                'B', new ItemStack(Blocks.log, 0, 2)); // Birch Log
+                'M', new ItemStack(itemResource, 1, 10), // Mirrored Glass
+                'Q', new ItemStack(itemNugget, 1, 5), // Quicksilver Nugget
+                'B', new ItemStack(Blocks.log, 1, 2)); // Birch Log
     }
 
     @Override

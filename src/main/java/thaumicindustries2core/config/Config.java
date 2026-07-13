@@ -14,7 +14,8 @@ public class Config extends AConfig {
     public static int redstoneDupe_Aspect_Machina, redstoneDupe_Aspect_Potentia, redstoneDupe_outputAmount;
     public static boolean removeDislocationFocus;
     public static boolean alternativeVisFilter;
-    protected static final String version = "1.8";
+    public static int alternativeVisFilter_outputAmount;
+    protected static final String version = "1.9";
 
     public Config(FMLPreInitializationEvent event) {
         super(ThaumicIndustries2Core.modName, event, version);
@@ -40,15 +41,15 @@ public class Config extends AConfig {
         // Redstone dupe
         {
             redstoneDupeMerge = newEntry(recipeMerges, "Redstone -> Redstone", "Delete the 2 additionnal recipes, and add one under Alchemy / Alchemical Duplication");
-            redstoneDupe_Aspect_Machina = newEntry(recipeMerges, "Redstone -> Redstone : Aspect - Machina", 2, 1, 64, null);
-            redstoneDupe_Aspect_Potentia = newEntry(recipeMerges, "Redstone -> Redstone : Aspect - Potentia", 2, 1, 64, null);
-            redstoneDupe_outputAmount = newEntry(recipeMerges, "Redstone -> Redstone : Output - Redstone", 2, 2, 64, null); }
+            redstoneDupe_Aspect_Machina = newEntry(recipeMerges, "Redstone -> Redstone : Aspect - Machina", 2, 1, 64);
+            redstoneDupe_Aspect_Potentia = newEntry(recipeMerges, "Redstone -> Redstone : Aspect - Potentia", 2, 1, 64);
+            redstoneDupe_outputAmount = newEntry(recipeMerges, "Redstone -> Redstone : Output - Redstone", 2, 2, 64); }
         // Wool -> String
         {
             woolToStringMerge = newEntry(recipeMerges, "Wool -> String", "Delete the 4 additionnal recipes, and add one under Alchemy / Entropic Process");
-            woolToString_Aspect_Fabrico = newEntry(recipeMerges, "Wool -> String : Aspect - Fabrico", 1, 1, 64, null);
-            woolToString_Aspect_Perditio = newEntry(recipeMerges, "Wool -> String : Aspect - Perditio", 1, 1, 64, null);
-            woolToString_stringAmount = newEntry(recipeMerges, "Wool -> String : Output - String", 4, 1, 64, null); }
+            woolToString_Aspect_Fabrico = newEntry(recipeMerges, "Wool -> String : Aspect - Fabrico", 1, 1, 64);
+            woolToString_Aspect_Perditio = newEntry(recipeMerges, "Wool -> String : Aspect - Perditio", 1, 1, 64);
+            woolToString_stringAmount = newEntry(recipeMerges, "Wool -> String : Output - String", 4, 1, 64); }
 
         comment(removals, "You can turn off/on removals here");
         {
@@ -67,6 +68,8 @@ public class Config extends AConfig {
 
         comment(tcieFeatures, "You can turn off/on special features made for the modpack Thaumic Industries");
         {
-            alternativeVisFilter = newEntry(tcieFeatures, "Alternative Vis Filter", "Adds a new research and arcane recipe for Vis Filter"); }
+            alternativeVisFilter = newEntry(tcieFeatures, "Alternative Vis Filter", "Adds a new research and arcane recipe for Vis Filter");
+            alternativeVisFilter_outputAmount = newEntry(tcieFeatures, "Alternative Vis Filter : Output", 1, 1, 64);
+        }
     }
 }
