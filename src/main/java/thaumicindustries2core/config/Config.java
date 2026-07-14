@@ -15,14 +15,14 @@ public class Config extends AConfig {
     public static boolean removeDislocationFocus;
     public static boolean alternativeVisFilter, alternativeCompoundLeather;
     public static int alternativeVisFilter_outputAmount, alternativeCompoundLeather_outputAmount;
-    protected static final String version = "1.9";
+    protected static final String version = "1.10";
 
     public Config(FMLPreInitializationEvent event) {
         super(ThaumicIndustries2Core.modName, event, version);
     }
 
     protected void loadConfig() {
-        String bugPatches = "Bug-Patches", expert = "Expert-Tweaks", recipeMerges = "Recipe-Merges", removals = "Removals", integrations = "Mod-Integrations", tcieFeatures = "TCIe-Features";;
+        String bugPatches = "Bug-Patches", expert = "Expert-Tweaks", recipeMerges = "Recipe-Merges", removals = "Removals", integrations = "Mod-Integrations", tcieFeatures = "TCIe-Features";
         comment(bugPatches, "You can tweak off/on bug patches here");
         {
             buggedRecipePatch = newEntry(bugPatches, "BuggedRecipePatch", "Removes all recipes that got a Null item set as output"); }
