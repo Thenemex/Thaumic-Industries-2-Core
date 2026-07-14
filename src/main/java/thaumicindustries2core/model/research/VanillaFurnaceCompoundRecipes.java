@@ -7,20 +7,17 @@ import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.research.ResearchPage;
 import thaumcraft.common.config.ConfigBlocks;
 
 import java.util.List;
 
-import static thaumcraft.api.aspects.Aspect.*;
-
 @SuppressWarnings("rawtypes")
 public class VanillaFurnaceCompoundRecipes extends AResearch {
 
     public final static String tag = "VANILLAFURNACE";
-    public final static Aspects compound = new Aspects(new Aspect[]{FIRE, EARTH, ORDER, ENTROPY}, 10, 10, 5, 5);
+    public final static Aspects compound = new Aspects(0, 10, 0, 10, 5, 5);
 
     public VanillaFurnaceCompoundRecipes() {
         super("ARTIFICE", tag, new ItemStack(Blocks.furnace));
