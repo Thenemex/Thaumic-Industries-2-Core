@@ -2,6 +2,7 @@ package thaumicindustries2core.model.config;
 
 import nemexlib.api.events.WandEventHandler;
 import thaumicindustries2core.model.events.AlternativeLeatherHandler;
+import thaumicindustries2core.model.research.AlternativeLeatherCompoundRecipe;
 import thaumicindustries2core.model.research.AlternativeVisFilterArcaneRecipe;
 
 import static thaumicindustries2core.config.Config.alternativeCompoundLeather;
@@ -24,6 +25,6 @@ public class ConfigModpackFeatures {
     protected static void loadAlternativeLeather_COMPOUND() {
         alternativeLeatherHandler = new AlternativeLeatherHandler();
         // Loading the research
-        // ToDo Research (auto-unlocked) in Artifice + Compound page
+        ConfigExpertTweaks.put(new AlternativeLeatherCompoundRecipe());
     }
 }

@@ -20,3 +20,7 @@ mod_research_page.VANILLAFURNACE.1=After some struggles on your first steps thro
 mod_research_name.ALTERNATIVEVISFILTER=Alternative Filter
 mod_research_text.ALTERNATIVEVISFILTER=Too lazy for finding Silverwood ?
 mod_research_page.ALTERNATIVEVISFILTER.1=You explored miles and miles of land, without ever finding that legendary white tree ... Or maybe you didn't ? <LINE> In your sleepless night out there in the wild, you actually thought of an insane way of faking a replicate of a Silverwood plank by using a composition of different shiny metals <BR> Faking thaumaturgy basic elements is almost impossible, so you will need a crazy amount of Ordo to sharpen any bad lines on that fake birch plank !
+#
+mod_research_name.ALTERNATIVELEATHER=Alternative Leather
+mod_research_text.ALTERNATIVELEATHER=Let's skin those zombies
+mod_research_page.ALTERNATIVELEATHER.1=Text to add
