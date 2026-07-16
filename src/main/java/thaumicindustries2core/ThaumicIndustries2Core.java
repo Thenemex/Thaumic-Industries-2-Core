@@ -6,9 +6,11 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import nemexlib.api.util.Logger;
 import nemexlib.config.AConfig;
+import net.minecraftforge.common.MinecraftForge;
 import thaumicindustries2core.config.Config;
 import thaumicindustries2core.model.RecipeHelpers;
 import thaumicindustries2core.model.config.*;
+import thaumicindustries2core.model.properties.PlayerCoreProgressHandler;
 
 import static thaumicindustries2core.ThaumicIndustries2Core.dependencies;
 import static thaumicindustries2core.ThaumicIndustries2Core.modID;
@@ -27,7 +29,10 @@ public class ThaumicIndustries2Core{
     }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent ignoredEvent) {}
+    public void init(FMLInitializationEvent ignoredEvent) {
+        // Loading custom player properties
+        MinecraftForge.EVENT_BUS.register(new PlayerCoreProgressHandler()); // ToDo Lock behind config entry
+    }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent ignoredEvent) {
