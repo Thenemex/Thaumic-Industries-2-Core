@@ -13,6 +13,7 @@ A config file is also present for turning off/on everything you want or don't wa
   - Added a new expert infusion recipe for Golem Core : Fishing
   - Added a new expert infusion recipe for Seraph's Shoulders
   - Added an alternative arcane recipe for Vis Filter
+  - Added an alternative mystical construct recipe for turning Rotten Flesh into Leather once
   - Removed the research & recipe for Wand Focus : Dislocation
 
   - Unified Crucible recipes under Alchemy tab for :
