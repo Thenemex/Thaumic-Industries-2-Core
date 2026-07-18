@@ -5,7 +5,6 @@ import nemexlib.api.items.types.BlockType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
 import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.items.wands.ItemWandCasting;
@@ -27,10 +26,7 @@ public class AlternativeLeatherHandler extends SingleBlockWithDropsHandlerWithou
      */
     @Override protected boolean dropItem(World world, ItemStack heldItem, EntityPlayer player, int x, int y, int z) {
         if (world.isRemote) return false;
-        if (hasRun(player, getTag())) {
-            player.addChatMessage(new ChatComponentText("Already run !"));
-            return false;
-        }
+        if (hasRun(player, getTag())) return false;
         if (isResearchNotComplete(player, getTag())) return false; // Needs research to perform recipe
         ItemWandCasting wand = (ItemWandCasting) heldItem.getItem();
         if (wand.getFocus(heldItem) != null) return false; // Needs no focus equipped on the wand
@@ -40,6 +36,9 @@ public class AlternativeLeatherHandler extends SingleBlockWithDropsHandlerWithou
             return false;
         world.setBlockToAir(x, y, z);
         spawnItem(world, x, y, z, getDrops());
+        // ToDo implement method in NemexLib for sound
+        world.playSoundEffect((double)x + 0.5, (double)y + 0.5, (double)z + 0.5,
+                "thaumcraft:gore", 1.0F, 1.0F);
         setRun(player, getTag());
         return true;
     }

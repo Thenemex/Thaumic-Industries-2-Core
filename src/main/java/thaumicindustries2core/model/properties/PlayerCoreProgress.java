@@ -15,7 +15,7 @@ public class PlayerCoreProgress implements IExtendedEntityProperties {
 
     public static final String propName = "CoreProgress";
 
-    protected Map<String, Boolean> hasRunCompound = new HashMap<>();
+    protected final Map<String, Boolean> hasRunCompound = new HashMap<>();
 
     @Override public void saveNBTData(NBTTagCompound compound) {
         NBTTagList list = new NBTTagList();
