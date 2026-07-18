@@ -1,6 +1,7 @@
 package thaumicindustries2core.model.properties;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
@@ -47,5 +48,16 @@ public class PlayerCoreProgress implements IExtendedEntityProperties {
     }
     public void setRun(String tag) {
         hasRunCompound.put(tag,true);
+    }
+
+    public static PlayerCoreProgress get(EntityPlayer player) {
+        if (player == null) return null;
+        return (PlayerCoreProgress) player.getExtendedProperties(propName); // Can be null
+    }
+    public static boolean hasRun(EntityPlayer player, String tag) {
+        return get(player).hasRun(tag);
+    }
+    public static void setRun(EntityPlayer player, String tag) {
+        get(player).setRun(tag);
     }
 }
