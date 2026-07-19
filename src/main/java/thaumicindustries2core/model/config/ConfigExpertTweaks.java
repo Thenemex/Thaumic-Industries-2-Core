@@ -1,12 +1,10 @@
 package thaumicindustries2core.model.config;
 
-import nemexlib.api.events.WandEventHandler;
 import nemexlib.api.items.vanilla.EnchantedBookMaker;
 import nemexlib.api.recipes.arcane.ArcaneAdder;
 import nemexlib.api.recipes.infusion.InfusionAdder;
 import nemexlib.api.thaumcraft.API;
 import nemexlib.api.thaumcraft.aspects.Aspects;
-import nemexlib.api.thaumcraft.research.AResearch;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -17,28 +15,25 @@ import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
+import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.config.ConfigResearch;
 import thaumicindustries2core.model.RecipeHelpers;
 import thaumicindustries2core.model.events.VanillaFurnaceHandler;
 import thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes;
 
-import java.util.HashMap;
-
-import static nemexlib.api.items.ItemFinder.findItemTC;
+import static nemexlib.api.items.ItemFinder.*;
 import static thaumcraft.api.aspects.Aspect.*;
 import static thaumcraft.common.config.ConfigItems.*;
 import static thaumicindustries2core.config.Config.*;
 
 public class ConfigExpertTweaks {
 
-    public static WandEventHandler vanillaFurnaceHandler;
-    public final static HashMap<String, AResearch> researchMap = new HashMap<>();
-
     public static ItemStack specialString = new ItemStack(Items.string);
 
     public static void init() {
         if (boneBow) loadExpertBoneBow_ARCANE();
         if (golemCoreFishing) loadExpertGolemCoreFishing_INFUSION();
+        if (infusion) loadExpertInfusionPrereqs();
         if (scribingTools) loadExpertScribingTools_ARCANE();
         if (thaumometer) loadExpertThaumometer_ARCANE();
         if (vanillaFurnace) loadExpertVanillaFurnace_COMPOUND();
@@ -83,6 +78,12 @@ public class ConfigExpertTweaks {
         );
         API.replacePage(research, new ResearchPage(recipe), 2);
     }
+    protected static void loadExpertInfusionPrereqs() {
+        ResearchItem research = API.getResearch("ARTIFICE", "INFUSION");
+        ItemStack alchemicalFurnace = new ItemStack(ConfigBlocks.blockStoneDevice, 1, 0),
+                arcaneAlembic = new ItemStack(ConfigBlocks.blockMetalDevice, 1, 1);
+        API.addItemTriggers(research, alchemicalFurnace, arcaneAlembic);
+    }
     protected static void loadExpertScribingTools_ARCANE() {
         ResearchItem research = API.getResearch("BASICS", "RESEARCH");
         // Removing recipe pages for research
@@ -125,12 +126,8 @@ public class ConfigExpertTweaks {
     }
     protected static void loadExpertVanillaFurnace_COMPOUND() {
         VanillaFurnaceHandler.initBlueprint();
-        vanillaFurnaceHandler = new VanillaFurnaceHandler();
+        new VanillaFurnaceHandler();
         // Loading the research
-        put(new VanillaFurnaceCompoundRecipes());
-    }
-
-    public static void put(AResearch research) {
-        researchMap.put(research.getTag(), research);
+        new VanillaFurnaceCompoundRecipes();
     }
 }
