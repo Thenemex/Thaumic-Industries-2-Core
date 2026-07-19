@@ -80,6 +80,7 @@ public class ConfigExpertTweaks {
     }
     protected static void loadExpertInfusionPrereqs() {
         ResearchItem research = API.getResearch("ARTIFICE", "INFUSION");
+        research.setHidden();
         ItemStack alchemicalFurnace = new ItemStack(ConfigBlocks.blockStoneDevice, 1, 0),
                 arcaneAlembic = new ItemStack(ConfigBlocks.blockMetalDevice, 1, 1);
         API.addItemTriggers(research, alchemicalFurnace, arcaneAlembic);
