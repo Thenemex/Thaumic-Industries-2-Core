@@ -8,6 +8,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import thaumcraft.common.items.wands.ItemWandCasting;
+import thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes;
 
 import static thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes.compound;
 
@@ -23,7 +24,7 @@ public class VanillaFurnaceHandler extends WandEventHandler {
         super(new BlockType[]{new BlockType(Blocks.coal_block)});
         // ToDo Add compatibility with Charcoal Block
         // ToDo Redo the shitty constructors in WandEventHandler
-        this.researchTag = "VANILLAFURNACE";
+        this.researchTag = VanillaFurnaceCompoundRecipes.tag;
     }
 
     public static void initBlueprint() {
