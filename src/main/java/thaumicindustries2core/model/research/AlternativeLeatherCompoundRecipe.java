@@ -24,7 +24,7 @@ public class AlternativeLeatherCompoundRecipe extends AResearch {
     @Override
     public void init() {
         this.setResearchAspects(new Aspects(0, 3, 0, 3, 3, 0));
-        this.setNewResearch(1, -7).setPages(newTextPage(1),
+        this.setNewResearch(-1, -7).setPages(newTextPage(1),
                 new ResearchPage(addCompoundRecipeLeather()));
     }
 
