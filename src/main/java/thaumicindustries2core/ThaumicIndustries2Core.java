@@ -53,6 +53,7 @@ public class ThaumicIndustries2Core{
     public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);" +
             "required-after:NemexLib@[1.11.2,);" +
             "after:benway_knowledge;" +
+            "after:campfirebackport;" +
             "after:ForbiddenMagic;" +
             "after:MagicCookie;" +
             "after:TaintedMagic;" +

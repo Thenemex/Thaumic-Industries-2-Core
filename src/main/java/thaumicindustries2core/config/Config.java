@@ -9,7 +9,7 @@ public class Config extends AConfig {
     public static boolean buggedRecipePatch;
     public static boolean boneBow, campfire, golemCoreFishing, infusion, scribingTools, thaumometer, vanillaFurnace, crystalWell, seraphShoulders;
     public static boolean redstoneDupeMerge, woolToStringMerge;
-    public static boolean fmEnabled, gtEnabled, mcEnabled, tbEnabled, tkEnabled, ttEnabled, wgEnabled;
+    public static boolean cbEnabled, fmEnabled, gtEnabled, mcEnabled, tbEnabled, tkEnabled, ttEnabled, wgEnabled;
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
     public static int redstoneDupe_Aspect_Machina, redstoneDupe_Aspect_Potentia, redstoneDupe_outputAmount;
     public static boolean removeDislocationFocus;
@@ -60,6 +60,7 @@ public class Config extends AConfig {
         
         comment(integrations, "You can turn off/on integrations here");
         {
+            cbEnabled = newEntry(integrations, "Campfire Backport");
             fmEnabled = newEntry(integrations, "Forbidden Magic");
             gtEnabled = newEntry(integrations, "Garden Trees");
             mcEnabled = newEntry(integrations, "Magic Cookies");
