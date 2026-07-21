@@ -12,6 +12,7 @@ public class ConfigIntegrations {
             // ba = "BloodArsenal",
             bm = "AWWayofTime",
             bt = "Botania",
+            cb = "campfirebackport",
             gt = "GardenTrees",
             mc = "MagicCookie",
             // sg = "Sanguimancy",
@@ -23,6 +24,7 @@ public class ConfigIntegrations {
             wg = "WitchingGadgets";
 
     public static void init() {
+        if (isModLoaded(cb, cbEnabled)) new CampfireBackportCompat(cb);
         if (isModLoaded(fm, fmEnabled)) new ForbiddenMagicCompat(fm, "FORBIDDEN");
         if (isModLoaded(mc, mcEnabled)) new MagicCookiesCompat(mc, "DARKSIDE");
         if (isModLoaded(tb, tbEnabled)) new ThaumicBasesCompat(tb, "THAUMICBASES");
