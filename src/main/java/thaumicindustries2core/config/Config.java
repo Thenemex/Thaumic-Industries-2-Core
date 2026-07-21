@@ -7,7 +7,7 @@ import thaumicindustries2core.ThaumicIndustries2Core;
 public class Config extends AConfig {
 
     public static boolean buggedRecipePatch;
-    public static boolean boneBow, golemCoreFishing, infusion, scribingTools, thaumometer, vanillaFurnace, crystalWell, seraphShoulders;
+    public static boolean boneBow, campfire, golemCoreFishing, infusion, scribingTools, thaumometer, vanillaFurnace, crystalWell, seraphShoulders;
     public static boolean redstoneDupeMerge, woolToStringMerge;
     public static boolean fmEnabled, gtEnabled, mcEnabled, tbEnabled, tkEnabled, ttEnabled, wgEnabled;
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
@@ -15,7 +15,7 @@ public class Config extends AConfig {
     public static boolean removeDislocationFocus;
     public static boolean alternativeVisFilter, alternativeCompoundLeather;
     public static int alternativeVisFilter_outputAmount, alternativeCompoundLeather_outputAmount;
-    protected static final String version = "1.11";
+    protected static final String version = "1.12";
 
     public Config(FMLPreInitializationEvent event) {
         super(ThaumicIndustries2Core.modName, event, version);
@@ -30,6 +30,7 @@ public class Config extends AConfig {
         comment(expert, "You can tweak off/on expert changes here");
         {
             boneBow = newEntry(expert, "BoneBow", "Sets a new arcane recipe with harder components");
+            campfire = newEntry(expert, "Campfire", "Adds a mystical construct recipe for the campfire");
             golemCoreFishing = newEntry(expert, "GolemCoreFishing", "Sets a new infusion recipe with harder and special components");
             infusion = newEntry(expert, "Infusion", "Sets new items to scan before being able to unlock infusion (Alchemical Furnace + Alembic)");
             scribingTools = newEntry(expert, "ScribingTools", "Sets a new arcane recipe, that will only accept TC4 Phials and not empty bottles");
