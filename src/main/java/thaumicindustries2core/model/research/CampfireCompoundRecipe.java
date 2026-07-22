@@ -25,7 +25,7 @@ public class CampfireCompoundRecipe extends AResearch {
     @Override
     public void init() {
         this.setResearchAspects(new Aspects(2, 6, 0, 2, 6, 0));
-        this.setNewResearch(1, -7).setPages(newTextPage(1),
+        this.setNewResearch(3, -7).setPages(newTextPage(1),
                 new ResearchPage(addCompoundRecipeCampfire())); // ToDo Do the localization text
     }
 
@@ -44,6 +44,5 @@ public class CampfireCompoundRecipe extends AResearch {
     @Override
     public void setResearchProperties() {
         this.research.setRound().setAutoUnlock();
-        // this.research.setParents("EARLYCOOKING"); // ToDo Add with scripting in TCIe
     }
 }
