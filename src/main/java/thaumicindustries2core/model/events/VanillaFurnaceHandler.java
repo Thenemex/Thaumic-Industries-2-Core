@@ -48,12 +48,11 @@ public class VanillaFurnaceHandler extends WandEventHandler {
     }
 
     protected boolean isMatchingBlueprint(World world, int x, int y, int z) {
-        Block block;
         boolean fit;
         for (int yy = 0; yy < 3; yy++)
             for (int xx = 0; xx < 3; xx++)
                 for (int zz = 0; zz < 3; zz++) {
-                    block = world.getBlock(x + xx - 1, y - yy + 1, z + zz - 1);
+                    Block block = world.getBlock(x + xx - 1, y - yy + 1, z + zz - 1);
                     fit = block.equals(blueprint[yy][xx][zz]);
                     if (fit && block.equals(Blocks.stone_slab))
                         // If block matches blueprint AND is a slab -> check for metadata 3 (Cobblestone Slab)
