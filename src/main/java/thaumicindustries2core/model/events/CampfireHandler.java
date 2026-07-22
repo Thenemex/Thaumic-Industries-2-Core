@@ -1,5 +1,6 @@
 package thaumicindustries2core.model.events;
 
+import connor135246.campfirebackport.common.blocks.CampfireBackportBlocks;
 import nemexlib.api.events.WandEventHandler;
 import nemexlib.api.items.types.BlockType;
 import net.minecraft.block.Block;
@@ -75,13 +76,11 @@ public class CampfireHandler extends WandEventHandler {
     }
 
     protected boolean replaceStructure(World world, int x, int y, int z) {
-        /**
         for (int yy = 0; yy < 3; yy++)
             for (int xx = 0; xx < 3; xx++)
                 for (int zz = 0; zz < 3; zz++)
                     world.setBlockToAir(x + xx - 1, y - yy + 1, z + zz - 1);
         world.setBlock(x, y - 1, z, CampfireBackportBlocks.campfire_base);
-         **/
         world.playSoundEffect((double)x + 0.5, (double)y + 0.5, (double)z + 0.5,
                 "thaumcraft:wand", 1.0F, 1.0F);
         return true;
