@@ -15,8 +15,6 @@ public class VanillaFurnaceHandler extends WandEventHandler {
 
     private Block[][][] blueprint;
 
-    private final Block slab = Blocks.stone_slab;
-
     public VanillaFurnaceHandler() {
         super(new BlockType[]{new BlockType(Blocks.coal_block)});
         // ToDo Add compatibility with Charcoal Block
@@ -28,7 +26,8 @@ public class VanillaFurnaceHandler extends WandEventHandler {
 
     public void initBlueprint() {
         Block cobble = Blocks.cobblestone,
-                coal = Blocks.coal_block;
+                coal = Blocks.coal_block,
+                slab = Blocks.stone_slab;
 
         blueprint = new Block[][][]
                 {{{cobble, cobble, cobble}, {cobble, cobble, cobble}, {cobble, cobble, cobble}},
@@ -56,7 +55,7 @@ public class VanillaFurnaceHandler extends WandEventHandler {
                 for (int zz = 0; zz < 3; zz++) {
                     block = world.getBlock(x + xx - 1, y - yy + 1, z + zz - 1);
                     fit = block.equals(blueprint[yy][xx][zz]);
-                    if (fit && block.equals(slab))
+                    if (fit && block.equals(Blocks.stone_slab))
                         // If block matches blueprint AND is a slab -> check for metadata 3 (Cobblestone Slab)
                         fit = world.getBlockMetadata(x + xx - 1, y - yy + 1, z + zz - 1) == 3;
                     if (!fit) return false;
