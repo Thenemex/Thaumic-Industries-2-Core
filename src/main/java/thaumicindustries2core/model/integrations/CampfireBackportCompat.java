@@ -2,6 +2,7 @@ package thaumicindustries2core.model.integrations;
 
 import nemexlib.api.integrations.ACompat;
 import thaumicindustries2core.config.Config;
+import thaumicindustries2core.model.events.CampfireHandler;
 import thaumicindustries2core.model.research.CampfireCompoundRecipe;
 
 public class CampfireBackportCompat extends ACompat {
@@ -17,6 +18,6 @@ public class CampfireBackportCompat extends ACompat {
 
     protected void loadExpertCampfire_COMPOUND() {
         // Loading the research
-        new CampfireCompoundRecipe();
+        new CampfireCompoundRecipe().setHandler(new CampfireHandler());
     }
 }

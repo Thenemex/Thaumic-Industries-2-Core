@@ -29,10 +29,10 @@ public class VanillaFurnaceHandler extends WandEventHandler {
                 coal = Blocks.coal_block,
                 slab = Blocks.stone_slab;
 
-        blueprint = new Block[][][]
-                {{{cobble, cobble, cobble}, {cobble, cobble, cobble}, {cobble, cobble, cobble}},
-                 {{cobble, slab, cobble}, {slab, coal, slab}, {cobble, slab, cobble}},
-                 {{cobble, slab, cobble}, {slab, cobble, slab}, {cobble, slab, cobble}}};
+        this.blueprint = new Block[][][] {
+                {{cobble, cobble, cobble}, {cobble, cobble, cobble}, {cobble, cobble, cobble}},
+                {{cobble, slab, cobble},   {slab, coal, slab},       {cobble, slab, cobble}},
+                {{cobble, slab, cobble},   {slab, cobble, slab},     {cobble, slab, cobble}}};
     }
 
     @Override
