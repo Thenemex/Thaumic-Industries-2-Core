@@ -25,6 +25,7 @@ public class VanillaFurnaceHandler extends WandEventHandler {
         // ToDo Add compatibility with Charcoal Block
         // ToDo Redo the shitty constructors in WandEventHandler
         this.researchTag = VanillaFurnaceCompoundRecipes.tag;
+        initBlueprint();
     }
 
     public static void initBlueprint() {

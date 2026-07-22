@@ -126,9 +126,7 @@ public class ConfigExpertTweaks {
         API.addPage(research, new ResearchPage(recipes), 2);
     }
     protected static void loadExpertVanillaFurnace_COMPOUND() {
-        VanillaFurnaceHandler.initBlueprint();
-        new VanillaFurnaceHandler();
-        // Loading the research
-        new VanillaFurnaceCompoundRecipes();
+        // Loading the research + handler
+        new VanillaFurnaceCompoundRecipes().setHandler(new VanillaFurnaceHandler());
     }
 }
