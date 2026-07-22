@@ -10,25 +10,23 @@ import net.minecraft.world.World;
 import thaumcraft.common.items.wands.ItemWandCasting;
 import thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes;
 
-import static thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes.compound;
-
 @SuppressWarnings("SameReturnValue")
 public class VanillaFurnaceHandler extends WandEventHandler {
 
-    private static Block[][][] blueprint;
-    protected final String researchTag;
+    private Block[][][] blueprint;
 
-    private static final Block slab = Blocks.stone_slab;
+    private final Block slab = Blocks.stone_slab;
 
     public VanillaFurnaceHandler() {
         super(new BlockType[]{new BlockType(Blocks.coal_block)});
         // ToDo Add compatibility with Charcoal Block
         // ToDo Redo the shitty constructors in WandEventHandler
-        this.researchTag = VanillaFurnaceCompoundRecipes.tag;
-        initBlueprint();
+        this.setTag(VanillaFurnaceCompoundRecipes.tag);
+        this.setVis(VanillaFurnaceCompoundRecipes.compound);
+        this.initBlueprint();
     }
 
-    public static void initBlueprint() {
+    public void initBlueprint() {
         Block cobble = Blocks.cobblestone,
                 coal = Blocks.coal_block;
 
@@ -41,11 +39,11 @@ public class VanillaFurnaceHandler extends WandEventHandler {
     @Override
     public boolean performTrigger(World world, ItemStack heldItem, EntityPlayer player, int x, int y, int z, int side, int event) {
         if (world.isRemote) return false;
-        if (isResearchNotComplete(player, researchTag)) return false; // Needs research to perform recipe
+        if (isResearchNotComplete(player, getTag())) return false; // Needs research to perform recipe
         ItemWandCasting wand = (ItemWandCasting) heldItem.getItem();
         if (wand.getFocus(heldItem) != null) return false; // Needs no focus equipped on the wand
         if (!player.isSneaking()) return false; // Player needs to be sneaking
-        if (isMatchingBlueprint(world, x, y, z) && wand.consumeAllVisCrafting(heldItem, player, compound, true))
+        if (isMatchingBlueprint(world, x, y, z) && wand.consumeAllVisCrafting(heldItem, player, getVis(), true))
             return replaceStructure(world, x, y, z, side); // Delete all blocks and place the furnace at y-1
         return false;
     }
