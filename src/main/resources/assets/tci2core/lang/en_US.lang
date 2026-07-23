@@ -26,6 +26,7 @@ mod_research_text.ALTERNATIVELEATHER=Let's skin those zombies
 mod_research_page.ALTERNATIVELEATHER.1=After miles and miles of exploration, it seems that all cows were abducted somewhere else nowhere to be found ... Or maybe you were too lazy for searching around ? <BR> Whatever, in your wildest dreams, you thought of a preparation to purify that nasty pile of zombie rotten flesh into tanned leather. <LINE> The process is not efficient at all, and only outputs a few pieces of leather ... <BR> This process was so nasty, you promised yourself to never ever do it again !
 #
 mod_research_name.CAMPFIRE=Wooden Campfire
-mod_research_text.CAMPFIRE=Cooking mama, now remastered !
-mod_research_page.CAMPFIRE.1=TEXT TO ADD
+mod_research_text.CAMPFIRE=Let starvation behind
+mod_research_page.CAMPFIRE.1=A basic caveman campfire shouldn't be too hard to make ... right ? <LINE> Any kind of vanilla wood logs and slabs can be used to process to turn this construct into an actual campfire ! <BR> Sneaking and right clicking the black carpet with your wand will trigger and magically turn the structure into a campfire.
+mod_research_page.CAMPFIRE.3=You can lit it on fire by using certain items, or by using a bit of Ignis from your wand ! The campfire will die by itself after a few minutes. <LINE> While it is burning, you can cook up to four raw items - they will take around 20 to 30 seconds before they become eatable !
 #

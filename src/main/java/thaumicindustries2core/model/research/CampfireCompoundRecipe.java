@@ -1,15 +1,18 @@
 package thaumicindustries2core.model.research;
 
+import connor135246.campfirebackport.common.blocks.CampfireBackportBlocks;
 import nemexlib.api.items.ItemFinder;
 import nemexlib.api.recipes.mystical.CompoundAdder;
 import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.research.ResearchPage;
 
 import java.util.List;
 
+import static nemexlib.api.items.ItemFinder.findItemTC;
 import static thaumicindustries2core.model.config.ConfigIntegrations.*;
 
 @SuppressWarnings("rawtypes")
@@ -26,7 +29,9 @@ public class CampfireCompoundRecipe extends AResearch {
     public void init() {
         this.setResearchAspects(new Aspects(2, 6, 0, 2, 6, 0));
         this.setNewResearch(3, -7).setPages(newTextPage(1),
-                new ResearchPage(addCompoundRecipeCampfire())); // ToDo Do the localization text
+                new ResearchPage(addCompoundRecipeCampfire()),
+                newTextPage(3),
+                new ResearchPage(addCompoundRecipeLitCampfire()));
     }
 
     protected List addCompoundRecipeCampfire() {
@@ -39,6 +44,11 @@ public class CampfireCompoundRecipe extends AResearch {
                 woodF, slabW, woodF,    woodF, carpB, woodF,    woodF, slabW, woodF,
                 woodL, woodL, woodL,    slabW, coalB, slabW,    woodL, woodL, woodL};
         return CompoundAdder.addCompoundRecipe(tag, compound, 3, 2, 3, structure);
+    }
+
+    protected List addCompoundRecipeLitCampfire() {
+        return CompoundAdder.addCompoundRecipe(tag, new Aspects(Aspect.FIRE, 5), 1, 2, 1,
+                findItemTC("WandCasting"), new ItemStack(CampfireBackportBlocks.campfire_base));
     }
 
     @Override
