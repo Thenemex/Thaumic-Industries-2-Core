@@ -45,6 +45,15 @@ minecraft {
     runDir = "eclipse"
 }
 
+jar {
+    manifest {
+        attributes(
+                'FMLCorePlugin': 'thaumicindustries2core.asm.TCI2CorePlugin',
+                'FMLCorePluginContainsFMLMod': 'true'
+        )
+    }
+}
+
 apply plugin: 'idea'
 idea {
     module {
