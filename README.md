@@ -12,6 +12,7 @@ A config file is also present for turning off/on everything you want or don't wa
   - Added a new expert arcane recipe for Bone Bow
   - Added a new expert infusion recipe for Golem Core : Fishing
   - Added a new expert infusion recipe for Seraph's Shoulders
+  - Added a new expert mystical construct recipe for Campfire
   - Added an alternative arcane recipe for Vis Filter
   - Added an alternative mystical construct recipe for turning Rotten Flesh into Leather once
   - Removed the research & recipe for Wand Focus : Dislocation
