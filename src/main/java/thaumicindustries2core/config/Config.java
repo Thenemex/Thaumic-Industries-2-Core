@@ -7,7 +7,7 @@ import thaumicindustries2core.ThaumicIndustries2Core;
 public class Config extends AConfig {
 
     public static boolean buggedRecipePatch;
-    public static boolean boneBow, campfire, golemCoreFishing, infusion, scribingTools, thaumometer, vanillaFurnace, crystalWell, seraphShoulders;
+    public static boolean boneBow, campfire, flintAndSteel, golemCoreFishing, infusion, scribingTools, thaumometer, vanillaFurnace, crystalWell, seraphShoulders;
     public static boolean redstoneDupeMerge, woolToStringMerge;
     public static boolean cbEnabled, fmEnabled, gtEnabled, mcEnabled, tbEnabled, tkEnabled, ttEnabled, wgEnabled;
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
@@ -31,6 +31,7 @@ public class Config extends AConfig {
         {
             boneBow = newEntry(expert, "BoneBow", "Sets a new arcane recipe with harder components");
             campfire = newEntry(expert, "Campfire", "Adds a mystical construct recipe for the campfire");
+            flintAndSteel = newEntry("FlintAndSteel", "Sets a new arcane recipe, locked behind unlocking Thaumium");
             golemCoreFishing = newEntry(expert, "GolemCoreFishing", "Sets a new infusion recipe with harder and special components");
             infusion = newEntry(expert, "Infusion", "Sets new items to scan before being able to unlock infusion (Alchemical Furnace + Alembic)");
             scribingTools = newEntry(expert, "ScribingTools", "Sets a new arcane recipe, that will only accept TC4 Phials and not empty bottles");

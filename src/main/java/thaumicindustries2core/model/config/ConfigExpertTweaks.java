@@ -19,6 +19,7 @@ import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.config.ConfigResearch;
 import thaumicindustries2core.model.RecipeHelpers;
 import thaumicindustries2core.model.events.VanillaFurnaceHandler;
+import thaumicindustries2core.model.research.FlintAndSteelArcaneRecipe;
 import thaumicindustries2core.model.research.VanillaFurnaceCompoundRecipes;
 
 import static nemexlib.api.items.ItemFinder.*;
@@ -32,6 +33,7 @@ public class ConfigExpertTweaks {
 
     public static void init() {
         if (boneBow) loadExpertBoneBow_ARCANE();
+        if (flintAndSteel) new FlintAndSteelArcaneRecipe();
         if (golemCoreFishing) loadExpertGolemCoreFishing_INFUSION();
         if (infusion) loadExpertInfusionPrereqs();
         if (scribingTools) loadExpertScribingTools_ARCANE();
