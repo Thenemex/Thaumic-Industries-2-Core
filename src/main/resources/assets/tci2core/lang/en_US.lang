@@ -13,10 +13,7 @@
 #   tci2core_research_text.KEY = Research subtext
 #   tci2core_research_page.KEY.NUMBER = Research text on page of number NUMBER
 #
-mod_research_name.VANILLAFURNACE=Stone Furnace
-mod_research_text.VANILLAFURNACE=It burns !
-mod_research_page.VANILLAFURNACE.1=After some struggles on your first steps through this world, you finally discover how to smelt items like your ancestors did.<LINE>You will need the sufficient amount of vis in your wand, then sneak and hit the coal block with it to transform the construct to a stone furnace !
-#
+
 mod_research_name.ALTERNATIVEVISFILTER=Alternative Filter
 mod_research_text.ALTERNATIVEVISFILTER=Too lazy for finding Silverwood ?
 mod_research_page.ALTERNATIVEVISFILTER.1=You explored miles and miles of land, without ever finding that legendary white tree ... Or maybe you didn't ? <LINE> In your sleepless night out there in the wild, you actually thought of an insane way of faking a replicate of a Silverwood plank by using a composition of different shiny metals <BR> Faking thaumaturgy basic elements is almost impossible, so you will need a crazy amount of Ordo to sharpen any bad lines on that fake birch plank !
@@ -24,6 +21,14 @@ mod_research_page.ALTERNATIVEVISFILTER.1=You explored miles and miles of land, w
 mod_research_name.ALTERNATIVELEATHER=Alternative Leather
 mod_research_text.ALTERNATIVELEATHER=Let's skin those zombies
 mod_research_page.ALTERNATIVELEATHER.1=After miles and miles of exploration, it seems that all cows were abducted somewhere else nowhere to be found ... Or maybe you were too lazy for searching around ? <BR> Whatever, in your wildest dreams, you thought of a preparation to purify that nasty pile of zombie rotten flesh into tanned leather. <LINE> The process is not efficient at all, and only outputs a few pieces of leather ... <BR> This process was so nasty, you promised yourself to never ever do it again !
+#
+mod_research_name.FLINTANDSTEEL=Flint and Steel
+mod_research_text.FLINTANDSTEEL=We're on fire tonight !
+mod_research_page.FLINTANDSTEEL.1=By hitting metal and flint together, you're able to generate some sparks ! <BR> However, those sparks alone are too weak to even do anything ... But if you add a touch of thaumium, a condensate of fire and some Ignis vis ; you're able to make a tool that is capable to set a whole block on fire !
+#
+mod_research_name.VANILLAFURNACE=Stone Furnace
+mod_research_text.VANILLAFURNACE=It burns !
+mod_research_page.VANILLAFURNACE.1=After some struggles on your first steps through this world, you finally discover how to smelt items like your ancestors did.<LINE>You will need the sufficient amount of vis in your wand, then sneak and hit the coal block with it to transform the construct to a stone furnace !
 #
 mod_research_name.CAMPFIRE=Wooden Campfire
 mod_research_text.CAMPFIRE=Let starvation behind
