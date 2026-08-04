@@ -24,7 +24,7 @@ mod_research_page.ALTERNATIVELEATHER.1=After miles and miles of exploration, it 
 #
 mod_research_name.FLINTANDSTEEL=Flint and Steel
 mod_research_text.FLINTANDSTEEL=We're on fire tonight !
-mod_research_page.FLINTANDSTEEL.1=By hitting metal and flint together, you're able to generate some sparks ! <BR> However, those sparks alone are too weak to even do anything ... But if you add a touch of thaumium, a condensate of fire and some Ignis vis ; you're able to make a tool that is capable to set a whole block on fire !
+mod_research_page.FLINTANDSTEEL.1=By hitting metal and flint together, you're able to generate some sparks ! <LINE> However, those sparks alone are too weak to even do anything ... But if you add a touch of thaumium, a condensate of fire and some Ignis vis ; you're able to make a tool that is capable to set a whole block on fire !
 #
 mod_research_name.VANILLAFURNACE=Stone Furnace
 mod_research_text.VANILLAFURNACE=It burns !
