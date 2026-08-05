@@ -16,6 +16,7 @@ import org.objectweb.asm.tree.MethodNode;
 import java.util.ListIterator;
 import static thaumicindustries2core.ThaumicIndustries2Core.logger;
 
+@SuppressWarnings("unused") // ToDo Code review
 public class ClaimMapTransformer implements IClassTransformer {
 
     private static final String TARGET = "ftb.utils.mod.client.gui.claims.GuiClaimChunks";
@@ -45,7 +46,7 @@ public class ClaimMapTransformer implements IClassTransformer {
         }
 
         if (!modified) {
-            ogger.warn("claim map: drawBackground not patched (method missing or layout changed)");
+            logger.warn("claim map: drawBackground not patched (method missing or layout changed)");
             return bytes;
         }
 
