@@ -31,7 +31,7 @@ public class Config extends AConfig {
         {
             boneBow = newEntry(expert, "BoneBow", "Sets a new arcane recipe with harder components");
             campfire = newEntry(expert, "Campfire", "Adds a mystical construct recipe for the campfire");
-            flintAndSteel = newEntry("FlintAndSteel", "Sets a new arcane recipe, locked behind unlocking Thaumium");
+            flintAndSteel = newEntry(expert, "FlintAndSteel", "Sets a new arcane recipe, locked behind unlocking Thaumium");
             golemCoreFishing = newEntry(expert, "GolemCoreFishing", "Sets a new infusion recipe with harder and special components");
             infusion = newEntry(expert, "Infusion", "Sets new items to scan before being able to unlock infusion (Alchemical Furnace + Alembic)");
             scribingTools = newEntry(expert, "ScribingTools", "Sets a new arcane recipe, that will only accept TC4 Phials and not empty bottles");
