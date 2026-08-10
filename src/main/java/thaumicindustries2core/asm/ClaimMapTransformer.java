@@ -19,7 +19,7 @@ import java.util.ListIterator;
 
 import static thaumicindustries2core.ThaumicIndustries2Core.logger;
 
-// soft dark glass instead of the solid claim-map fill
+@SuppressWarnings("unused") // ToDo Code review
 public class ClaimMapTransformer implements IClassTransformer {
 
     private static final String FTBU_GUI = "ftb.utils.mod.client.gui.claims.GuiClaimChunks";
