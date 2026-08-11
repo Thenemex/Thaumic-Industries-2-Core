@@ -6,13 +6,13 @@ import nemexlib.api.items.thaumcraft.JarMaker;
 import nemexlib.api.recipes.infusion.InfusionAdder;
 import nemexlib.api.thaumcraft.API;
 import nemexlib.api.thaumcraft.aspects.Aspects;
+import nemexlib.model.config.RecipeHelpers;
 import net.minecraft.item.ItemStack;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
 import thaumicindustries2core.config.Config;
-import thaumicindustries2core.model.RecipeHelpers;
 
 import static nemexlib.api.items.ItemFinder.findItem;
 import static nemexlib.api.items.ItemFinder.findItemTC;

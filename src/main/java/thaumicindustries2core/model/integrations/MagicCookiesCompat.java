@@ -2,10 +2,10 @@ package thaumicindustries2core.model.integrations;
 
 import nemexlib.api.integrations.ACompat;
 import nemexlib.api.thaumcraft.API;
+import nemexlib.model.config.RecipeHelpers;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import thaumicindustries2core.config.Config;
-import thaumicindustries2core.model.RecipeHelpers;
 
 public class MagicCookiesCompat extends ACompat {
 

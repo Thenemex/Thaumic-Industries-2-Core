@@ -3,12 +3,12 @@ package thaumicindustries2core.model.research;
 import nemexlib.api.recipes.arcane.ArcaneAdder;
 import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;
+import nemexlib.model.config.RecipeHelpers;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.research.ResearchPage;
 import thaumcraft.common.config.ConfigItems;
-import thaumicindustries2core.model.RecipeHelpers;
 
 import static thaumcraft.api.aspects.Aspect.*;
 

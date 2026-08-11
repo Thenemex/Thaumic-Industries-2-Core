@@ -3,8 +3,8 @@ package thaumicindustries2core.model.integrations;
 import nemexlib.api.integrations.ACompat;
 import nemexlib.api.items.ItemFinder;
 import nemexlib.api.thaumcraft.API;
+import nemexlib.model.config.RecipeHelpers;
 import thaumicindustries2core.config.Config;
-import thaumicindustries2core.model.RecipeHelpers;
 
 public class ThaumicTinkererCompat extends ACompat {
 
