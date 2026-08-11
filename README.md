@@ -24,7 +24,7 @@ A config file is also present for turning off/on everything you want or don't wa
   - Replaced all research pages associated with those recipes
   - Added compatibility with damaged tools for expert recipes
   - Added compatibility with most modded axes for Garden Trees's post recipes
-  - Replaced the background map with a translucent texture in FTBU Chunk Claim GUI
+  - Replaced the background map with a translucent texture in FTBU & ServerUtil GTNH Chunk Claim GUI
 
 ### Required mods :
 This mod requires to have Thaumcraft 4 and NemexLib installed to be able to run.

@@ -8,7 +8,6 @@ import nemexlib.api.util.Logger;
 import nemexlib.config.AConfig;
 import net.minecraftforge.common.MinecraftForge;
 import thaumicindustries2core.config.Config;
-import thaumicindustries2core.model.RecipeHelpers;
 import thaumicindustries2core.model.config.*;
 import thaumicindustries2core.model.properties.PlayerCoreProgressHandler;
 
@@ -16,7 +15,7 @@ import static thaumicindustries2core.ThaumicIndustries2Core.dependencies;
 import static thaumicindustries2core.ThaumicIndustries2Core.modID;
 
 @SuppressWarnings({"unused", "EmptyMethod"})
-@Mod(modid = modID, useMetadata = true, version = "1.14", dependencies = dependencies)
+@Mod(modid = modID, useMetadata = true, version = "1.14.1", dependencies = dependencies)
 public class ThaumicIndustries2Core{
 
     public static final String modID = "TCI2Core", modName = "ThaumicIndustries2Core";
@@ -36,8 +35,6 @@ public class ThaumicIndustries2Core{
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent ignoredEvent) {
-        // Instanciating recipe helpers
-        RecipeHelpers.init();
         // Loading integrations
         ConfigIntegrations.init();
         // Loading expert recipe changes
@@ -51,7 +48,7 @@ public class ThaumicIndustries2Core{
     }
 
     public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);" +
-            "required-after:NemexLib@[1.11.2,);" +
+            "required-after:NemexLib@[1.11.3,);" +
             "after:FTBU;" +
             "after:serverutilities;" +
             "after:benway_knowledge;" +
