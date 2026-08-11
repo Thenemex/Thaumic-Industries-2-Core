@@ -91,10 +91,10 @@ public class ClaimMapTransformer implements IClassTransformer {
 
     private static byte[] finish(byte[] original, ClassNode node, boolean modified, String label) {
         if (!modified) {
-            logger.warn("claim map (" + label + "): not patched (layout changed or missing)");
+            logger.warn("Claim map (" + label + "): not patched (layout changed or missing)");
             return original;
         }
-        logger.info("claim map (" + label + "): translucent background patch applied");
+        logger.info("Claim map (" + label + "): translucent background patch applied");
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
         node.accept(writer);
         return writer.toByteArray();
