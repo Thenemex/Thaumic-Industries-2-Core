@@ -33,11 +33,11 @@ public class WitchingGadgetsCompat extends ACompat {
             loadExpertSeraphShoulders_INFUSION();
     }
 
-    protected void addYarnToExpertBoneBow() {
+    private void addYarnToExpertBoneBow() {
         ConfigExpertTweaks.specialString = new ItemStack(WGContent.ItemMaterial, 1, 0);
     }
 
-    protected void loadExpertSeraphShoulders_INFUSION() {
+    private void loadExpertSeraphShoulders_INFUSION() {
         ResearchItem research = API.getResearch(tab, "WGBAUBLES");
         // Adding Arcane Bellows as prereq
         API.addParents(research, true, "BELLOWS");

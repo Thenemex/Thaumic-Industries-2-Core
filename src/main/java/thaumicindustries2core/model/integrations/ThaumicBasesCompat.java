@@ -19,7 +19,7 @@ public class ThaumicBasesCompat extends ACompat {
         if (Config.redstoneDupeMerge) deleteRestoneDupeCrucibleRecipe();
     }
 
-    protected void deleteWoolToStringCrucibleRecipe() {
+    private void deleteWoolToStringCrucibleRecipe() {
         String key1 = "TB.AdvancedEntropy", key2 = "TB.MasterEntropy";
         ItemStack string = new ItemStack(Items.string);
         RecipeHelpers.crucibleRemover.removeItem(string, key1);
@@ -27,7 +27,7 @@ public class ThaumicBasesCompat extends ACompat {
         RecipeHelpers.crucibleRemover.removeItem(string, key2);
         API.removePage(tab, key2, 2);
     }
-    protected void deleteRestoneDupeCrucibleRecipe() {
+    private void deleteRestoneDupeCrucibleRecipe() {
         String key = "TB.SimpleDublication"; // What the typo
         RecipeHelpers.crucibleRemover.removeItem(new ItemStack(Items.redstone), key);
         API.removePage(tab, key, 4);

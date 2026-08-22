@@ -41,7 +41,7 @@ public class ConfigExpertTweaks {
         if (vanillaFurnace) loadExpertVanillaFurnace_COMPOUND();
     }
 
-    protected static void loadExpertBoneBow_ARCANE() {
+    private static void loadExpertBoneBow_ARCANE() {
         ResearchItem research = API.getResearch("ARTIFICE", "BONEBOW");
         // Adding Bone Rod as prereq
         API.addParents(research, true, "ROD_bone");
@@ -59,7 +59,7 @@ public class ConfigExpertTweaks {
                 'R', findItemTC("WandRod", 7)); // Bone Rod
         API.replacePage(research, new ResearchPage(recipe), 2);
     }
-    protected static void loadExpertGolemCoreFishing_INFUSION() {
+    private static void loadExpertGolemCoreFishing_INFUSION() {
         ResearchItem research = API.getResearch("GOLEMANCY", "COREFISHING");
         // Remove current recipe for CoreFishing
         InfusionRecipe recipe = (InfusionRecipe) ConfigResearch.recipes.remove("CoreFishing");
@@ -80,14 +80,14 @@ public class ConfigExpertTweaks {
         );
         API.replacePage(research, new ResearchPage(recipe), 2);
     }
-    protected static void loadExpertInfusionPrereqs() {
+    private static void loadExpertInfusionPrereqs() {
         ResearchItem research = API.getResearch("ARTIFICE", "INFUSION");
         research.setHidden();
         ItemStack alchemicalFurnace = new ItemStack(ConfigBlocks.blockStoneDevice, 1, 0),
                 arcaneAlembic = new ItemStack(ConfigBlocks.blockMetalDevice, 1, 1);
         API.addItemTriggers(research, alchemicalFurnace, arcaneAlembic);
     }
-    protected static void loadExpertScribingTools_ARCANE() {
+    private static void loadExpertScribingTools_ARCANE() {
         ResearchItem research = API.getResearch("BASICS", "RESEARCH");
         // Removing recipe pages for research
         API.removePage(research, 6);
@@ -105,7 +105,7 @@ public class ConfigExpertTweaks {
                 "dyeBlack");
         API.addPage(research, new ResearchPage(recipe), 6);
     }
-    protected static void loadExpertThaumometer_ARCANE() {
+    private static void loadExpertThaumometer_ARCANE() {
         ResearchItem research = API.getResearch("ARTIFICE", "THAUMOMETER");
         // Removing recipe pages for research
         API.removePage(research, 2);
@@ -127,7 +127,7 @@ public class ConfigExpertTweaks {
                 'V', new ItemStack(Blocks.glass));
         API.addPage(research, new ResearchPage(recipes), 2);
     }
-    protected static void loadExpertVanillaFurnace_COMPOUND() {
+    private static void loadExpertVanillaFurnace_COMPOUND() {
         // Loading the research + handler
         new VanillaFurnaceCompoundRecipes().setHandler(new VanillaFurnaceHandler());
     }

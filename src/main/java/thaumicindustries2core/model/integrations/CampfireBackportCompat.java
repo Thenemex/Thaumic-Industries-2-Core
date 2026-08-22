@@ -16,7 +16,7 @@ public class CampfireBackportCompat extends ACompat {
         if (Config.campfire) loadExpertCampfire_COMPOUND();
     }
 
-    protected void loadExpertCampfire_COMPOUND() {
+    private void loadExpertCampfire_COMPOUND() {
         // Loading the research
         new CampfireCompoundRecipe().setHandler(new CampfireHandler());
     }

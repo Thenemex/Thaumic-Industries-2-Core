@@ -18,7 +18,7 @@ public class MagicCookiesCompat extends ACompat {
         if (Config.woolToStringMerge) deleteWoolToStringCrucibleRecipe();
     }
 
-    protected void deleteWoolToStringCrucibleRecipe() {
+    private void deleteWoolToStringCrucibleRecipe() {
         String key = "WOOLTOSTRING";
         RecipeHelpers.crucibleRemover.removeItem(new ItemStack(Items.string), key);
         API.removeResearch(tab, key);

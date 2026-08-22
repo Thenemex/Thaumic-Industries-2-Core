@@ -17,7 +17,7 @@ public class ThaumicTinkererCompat extends ACompat {
         if (Config.removeDislocationFocus) removeDislocationFocus();
     }
 
-    protected void removeDislocationFocus() {
+    private void removeDislocationFocus() {
         // Removing the recipe for item
         RecipeHelpers.infusionRemover.removeItem(ItemFinder.findItem(mod, "focusDislocation"));
         // Removing the associated research

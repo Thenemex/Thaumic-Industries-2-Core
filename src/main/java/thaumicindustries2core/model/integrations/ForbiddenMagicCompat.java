@@ -29,7 +29,7 @@ public class ForbiddenMagicCompat extends ACompat {
         if (Config.crystalWell) loadExpertCrystalWell_INFUSION();
     }
 
-    protected void loadExpertCrystalWell_INFUSION() {
+    private void loadExpertCrystalWell_INFUSION() {
         ResearchItem research = API.getResearch(tab, "CRYSTALWELL");
         // Adding Warded Jar as prereq
         API.addParents(research, true, "INFUSION"); // Includes JARLABEL as needed research
