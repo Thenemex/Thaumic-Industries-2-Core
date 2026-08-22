@@ -15,8 +15,14 @@ public class ThaumicBasesCompat extends ACompat {
 
     @Override
     public void loadIntegration() {
+        if (Config.herobrineScythe) loadExpertHerobrineScythe_INFUSION();
+
         if (Config.woolToStringMerge) deleteWoolToStringCrucibleRecipe();
         if (Config.redstoneDupeMerge) deleteRestoneDupeCrucibleRecipe();
+    }
+
+    private void loadExpertHerobrineScythe_INFUSION() {
+
     }
 
     private void deleteWoolToStringCrucibleRecipe() {
