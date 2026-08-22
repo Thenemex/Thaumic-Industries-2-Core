@@ -48,7 +48,7 @@ public class ThaumicIndustries2Core{
     }
 
     public static final String dependencies = "required-after:Thaumcraft@[4.2.3.5,);" +
-            "required-after:NemexLib@[1.11.3,);" +
+            "required-after:NemexLib@[1.11.6,);" +
             "after:FTBU;" +
             "after:serverutilities;" +
             "after:benway_knowledge;" +
