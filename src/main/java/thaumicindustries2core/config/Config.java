@@ -15,7 +15,7 @@ public class Config extends AConfig {
     public static boolean removeDislocationFocus;
     public static boolean alternativeVisFilter, alternativeCompoundLeather;
     public static int alternativeVisFilter_outputAmount, alternativeCompoundLeather_outputAmount;
-    protected static final String version = "1.13";
+    protected static final String version = "1.16";
 
     public Config(FMLPreInitializationEvent event) {
         super(ThaumicIndustries2Core.modName, event, version);
