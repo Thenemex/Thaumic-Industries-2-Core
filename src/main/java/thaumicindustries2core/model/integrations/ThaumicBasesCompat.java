@@ -70,6 +70,8 @@ public class ThaumicBasesCompat extends ACompat {
                 pearl, // Primordial Pearl
                 cloth // Crimson-stained Cloth
         );
+        // Adding the prereqs
+        research.setParentsHidden("FOCUSSHOCK", "FOCALMANIPULATION", "Movement_Talisman", "LIQUIDDEATH", "OCULUS", "PRIMPEARL", "CRIMSONROBES", "ROD_primal_staff", "BLOOD_SWORD");
         API.replacePage(research, new ResearchPage(recipe), 3);
     }
 
