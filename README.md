@@ -3,7 +3,7 @@ I added here tweaks that don't really fit well in my other mods, tweaks that are
 
 A config file is also present for turning off/on everything you want or don't want.
 
-### List of tweaks :
+### Unexhaustive list of tweaks :
   - Replaced the Vanilla Stone Furnace with a mystical construct (some Cobblestone & Coal Block)
   - Replaced the Scribing Tools recipe with an Arcane recipe (Glass Phial, Feather and Ink)
   - Replaced the Crystal Scribing Tools with an Infusion recipe
@@ -26,6 +26,8 @@ A config file is also present for turning off/on everything you want or don't wa
   - Added compatibility with most modded axes for Garden Trees's post recipes
   - Replaced the background map with a translucent texture in FTBU & ServerUtil GTNH Chunk Claim GUI
   - Removed the potion effect of Armor Stripping from Witchery
+
+  - And many more ! I was getting tired of filling this list over time x)
 
 ### Required mods :
 This mod requires to have Thaumcraft 4 and NemexLib installed to be able to run.
