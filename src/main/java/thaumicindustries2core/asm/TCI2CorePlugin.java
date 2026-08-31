@@ -12,7 +12,8 @@ public class TCI2CorePlugin implements IFMLLoadingPlugin {
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[]{"thaumicindustries2core.asm.ClaimMapTransformer",
+        return new String[]{
+                "thaumicindustries2core.asm.ClaimMapTransformer",
                 "thaumicindustries2core.asm.IllFittingTransformer"};
     }
 

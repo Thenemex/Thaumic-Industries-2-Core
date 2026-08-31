@@ -1,6 +1,7 @@
 package thaumicindustries2core.model.research;
 
 import connor135246.campfirebackport.common.blocks.CampfireBackportBlocks;
+import connor135246.campfirebackport.config.CampfireBackportConfig;
 import nemexlib.api.items.ItemFinder;
 import nemexlib.api.recipes.mystical.CompoundAdder;
 import nemexlib.api.thaumcraft.aspects.Aspects;
@@ -47,7 +48,7 @@ public class CampfireCompoundRecipe extends AResearch {
     }
 
     protected List addCompoundRecipeLitCampfire() {
-        return CompoundAdder.addCompoundRecipe(tag, new Aspects(Aspect.FIRE, 5), 1, 2, 1,
+        return CompoundAdder.addCompoundRecipe(tag, new Aspects(Aspect.FIRE, (int) CampfireBackportConfig.visCosts[2]), 1, 2, 1,
                 findItemTC("WandCasting"), new ItemStack(CampfireBackportBlocks.campfire_base));
     }
 
