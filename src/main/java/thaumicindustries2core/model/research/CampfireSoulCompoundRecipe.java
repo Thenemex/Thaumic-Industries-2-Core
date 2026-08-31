@@ -50,7 +50,7 @@ public class CampfireSoulCompoundRecipe extends AResearch {
     }
 
     protected List addCompoundRecipeLitCampfireSoul() {
-        return CompoundAdder.addCompoundRecipe(tag, new Aspects(Aspect.FIRE, (int) CampfireBackportConfig.visCosts[3]), 1, 2, 1,
+        return CompoundAdder.addCompoundRecipe(tag, new Aspects(Aspect.FIRE, 70), 1, 2, 1,
                 findItemTC("WandCasting"), new ItemStack(CampfireBackportBlocks.soul_campfire_base));
     }
 
