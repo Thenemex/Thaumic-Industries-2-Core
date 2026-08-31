@@ -1,7 +1,6 @@
 package thaumicindustries2core.model.research;
 
 import connor135246.campfirebackport.common.blocks.CampfireBackportBlocks;
-import connor135246.campfirebackport.config.CampfireBackportConfig;
 import nemexlib.api.items.ItemFinder;
 import nemexlib.api.recipes.mystical.CompoundAdder;
 import nemexlib.api.thaumcraft.aspects.Aspects;
