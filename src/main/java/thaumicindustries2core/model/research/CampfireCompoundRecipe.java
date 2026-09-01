@@ -20,6 +20,7 @@ public class CampfireCompoundRecipe extends AResearch {
 
     public final static String tag = "CAMPFIRE";
     public final static Aspects compound = new Aspects(0, 0, 0, 5, 0, 5);
+    public final static Aspects ignite = new Aspects(3, 5, 0, 0, 3, 0);
 
     public CampfireCompoundRecipe() {
         super("ARTIFICE", tag, ItemFinder.findItem(cb, "campfire"));
@@ -47,7 +48,7 @@ public class CampfireCompoundRecipe extends AResearch {
     }
 
     protected List addCompoundRecipeLitCampfire() {
-        return CompoundAdder.addCompoundRecipe(tag, new Aspects(Aspect.FIRE, 5), 1, 2, 1,
+        return CompoundAdder.addCompoundRecipe(tag, ignite, 1, 2, 1,
                 findItemTC("WandCasting"), new ItemStack(CampfireBackportBlocks.campfire_base));
     }
 
