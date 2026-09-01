@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.research.ResearchPage;
 import thaumcraft.common.config.ConfigBlocks;
+import thaumicindustries2core.model.events.campfire.igniter.CampfireSoulIgniterHandler;
 
 import java.util.List;
 
@@ -35,6 +36,8 @@ public class CampfireSoulCompoundRecipe extends AResearch {
                 new ResearchPage(addCompoundRecipeCampfireSoul()),
                 newTextPage(3),
                 new ResearchPage(addCompoundRecipeLitCampfireSoul()));
+        // Handler for igniting the campfire with custom aspects
+        new CampfireSoulIgniterHandler(tag, ignite);
     }
 
     protected List addCompoundRecipeCampfireSoul() {

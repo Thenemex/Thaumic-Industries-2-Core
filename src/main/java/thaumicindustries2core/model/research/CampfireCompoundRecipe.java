@@ -7,8 +7,8 @@ import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.research.ResearchPage;
+import thaumicindustries2core.model.events.campfire.igniter.CampfireIgniterHandler;
 
 import java.util.List;
 
@@ -33,6 +33,8 @@ public class CampfireCompoundRecipe extends AResearch {
                 new ResearchPage(addCompoundRecipeCampfire()),
                 newTextPage(3),
                 new ResearchPage(addCompoundRecipeLitCampfire()));
+        // Handler for igniting the campfire with custom aspects
+        new CampfireIgniterHandler(tag, ignite);
     }
 
     protected List addCompoundRecipeCampfire() {
