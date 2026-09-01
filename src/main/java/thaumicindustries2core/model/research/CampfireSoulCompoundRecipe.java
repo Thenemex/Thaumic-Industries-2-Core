@@ -22,6 +22,7 @@ public class CampfireSoulCompoundRecipe extends AResearch {
 
     public final static String tag = "CAMPFIRE_SOUL";
     public final static Aspects compound = new Aspects(0, 0, 0, 50, 0, 50);
+    public final static Aspects ignite = new Aspects(0, 25, 80, 0, 25);
 
     public CampfireSoulCompoundRecipe() {
         super("ARTIFICE", tag, ItemFinder.findItem(cb, "soul_campfire"));
@@ -49,13 +50,13 @@ public class CampfireSoulCompoundRecipe extends AResearch {
     }
 
     protected List addCompoundRecipeLitCampfireSoul() {
-        return CompoundAdder.addCompoundRecipe(tag, new Aspects(Aspect.FIRE, 70), 1, 2, 1,
+        return CompoundAdder.addCompoundRecipe(tag, ignite, 1, 2, 1,
                 findItemTC("WandCasting"), new ItemStack(CampfireBackportBlocks.soul_campfire_base));
     }
 
 
     @Override
     public void setResearchProperties() {
-
+        this.research.setParents(CampfireCompoundRecipe.tag);
     }
 }

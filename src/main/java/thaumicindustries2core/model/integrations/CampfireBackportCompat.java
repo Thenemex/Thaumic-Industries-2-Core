@@ -3,6 +3,8 @@ package thaumicindustries2core.model.integrations;
 import nemexlib.api.integrations.ACompat;
 import thaumicindustries2core.config.Config;
 import thaumicindustries2core.model.events.CampfireHandler;
+import thaumicindustries2core.model.events.campfire.CampfireIgniterHandler;
+import thaumicindustries2core.model.events.campfire.CampfireSoulIgniterHandler;
 import thaumicindustries2core.model.research.CampfireCompoundRecipe;
 import thaumicindustries2core.model.research.CampfireSoulCompoundRecipe;
 
@@ -19,11 +21,14 @@ public class CampfireBackportCompat extends ACompat {
     }
 
     private void loadExpertCampfire_COMPOUND() {
-        // Loading the research
         new CampfireCompoundRecipe().setHandler(new CampfireHandler());
+        // Handler for igniting the campfire with custom aspects
+        new CampfireIgniterHandler();
     }
 
     private void loadExpertCampfireSoul_COMPOUND() {
-        new CampfireSoulCompoundRecipe(); //.setHandler(); // ToDo Handler
+        new CampfireSoulCompoundRecipe().setHandler(null);
+        // Handler for igniting the campfire with custom aspects
+        new CampfireSoulIgniterHandler();
     }
 }
