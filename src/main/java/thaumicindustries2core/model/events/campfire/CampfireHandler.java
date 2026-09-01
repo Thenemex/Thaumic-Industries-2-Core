@@ -1,4 +1,4 @@
-package thaumicindustries2core.model.events;
+package thaumicindustries2core.model.events.campfire;
 
 import connor135246.campfirebackport.common.blocks.CampfireBackportBlocks;
 import nemexlib.api.events.WandEventHandler;

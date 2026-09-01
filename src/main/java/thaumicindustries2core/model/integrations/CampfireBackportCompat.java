@@ -2,9 +2,9 @@ package thaumicindustries2core.model.integrations;
 
 import nemexlib.api.integrations.ACompat;
 import thaumicindustries2core.config.Config;
-import thaumicindustries2core.model.events.CampfireHandler;
-import thaumicindustries2core.model.events.campfire.CampfireIgniterHandler;
-import thaumicindustries2core.model.events.campfire.CampfireSoulIgniterHandler;
+import thaumicindustries2core.model.events.campfire.CampfireHandler;
+import thaumicindustries2core.model.events.campfire.igniter.CampfireIgniterHandler;
+import thaumicindustries2core.model.events.campfire.igniter.CampfireSoulIgniterHandler;
 import thaumicindustries2core.model.research.CampfireCompoundRecipe;
 import thaumicindustries2core.model.research.CampfireSoulCompoundRecipe;
 

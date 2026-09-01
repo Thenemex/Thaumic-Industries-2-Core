@@ -1,4 +1,4 @@
-package thaumicindustries2core.model.events.campfire;
+package thaumicindustries2core.model.events.campfire.igniter;
 
 import connor135246.campfirebackport.common.blocks.BlockCampfire;
 import connor135246.campfirebackport.common.blocks.CampfireBackportBlocks;
