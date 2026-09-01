@@ -27,7 +27,7 @@ public class CampfireBackportCompat extends ACompat {
     }
 
     private void loadExpertCampfireSoul_COMPOUND() {
-        new CampfireSoulCompoundRecipe().setHandler(null);
+        new CampfireSoulCompoundRecipe();
         // Handler for igniting the campfire with custom aspects
         new CampfireSoulIgniterHandler();
     }

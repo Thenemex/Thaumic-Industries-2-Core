@@ -22,7 +22,7 @@ public class CampfireSoulCompoundRecipe extends AResearch {
 
     public final static String tag = "CAMPFIRE_SOUL";
     public final static Aspects compound = new Aspects(0, 0, 0, 50, 0, 50);
-    public final static Aspects ignite = new Aspects(0, 25, 80, 0, 25);
+    public final static Aspects ignite = new Aspects(0, 30, 80, 0, 30, 0);
 
     public CampfireSoulCompoundRecipe() {
         super("ARTIFICE", tag, ItemFinder.findItem(cb, "soul_campfire"));
@@ -58,5 +58,8 @@ public class CampfireSoulCompoundRecipe extends AResearch {
     @Override
     public void setResearchProperties() {
         this.research.setParents(CampfireCompoundRecipe.tag);
+        this.research.setParentsHidden("ROD_greatwood");
+        this.research.setHidden();
+        this.research.setItemTriggers(new ItemStack(Blocks.soul_sand));
     }
 }
