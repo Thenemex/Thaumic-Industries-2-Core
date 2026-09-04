@@ -11,8 +11,6 @@ import net.minecraft.world.World;
 import thaumcraft.common.items.wands.ItemWandCasting;
 import thaumicindustries2core.model.research.CampfireCompoundRecipe;
 
-import static thaumicindustries2core.ThaumicIndustries2Core.logger;
-
 public class CampfireHandler extends WandEventHandler {
 
     private BlockType[][][] blueprint, blueprint2;
@@ -72,6 +70,7 @@ public class CampfireHandler extends WandEventHandler {
         return true;
     }
 
+    @SuppressWarnings("SameReturnValue")
     protected boolean replaceStructure(World world, int x, int y, int z) {
         for (int yy = 0; yy < 3; yy++)
             for (int xx = 0; xx < 3; xx++)

@@ -13,12 +13,15 @@ import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.items.wands.ItemWandCasting;
 import thaumicindustries2core.model.research.CampfireSoulCompoundRecipe;
 
+@SuppressWarnings("SameReturnValue")
 public class CampfireSoulHandler extends WandEventHandler {
 
     private BlockType[][][] blueprint, blueprint2;
 
     public CampfireSoulHandler() {
-        super(new BlockType(ModBlocks.GRAVESTONE));
+        super();
+        for (int i = 0; i < 4; i++)
+            super.registerTriggerEvent(new BlockType(ModBlocks.GRAVESTONE, i));
         this.setTag(CampfireSoulCompoundRecipe.tag);
         this.setVis(CampfireSoulCompoundRecipe.compound);
         this.initBlueprint();
@@ -59,24 +62,26 @@ public class CampfireSoulHandler extends WandEventHandler {
                 for (int zz = 0; zz < 3; zz++) {
                     Block block = world.getBlock(x + xx - 1, y - yy, z + zz - 1);
                     BlockType type = blueprint[yy][xx][zz];
-                    fit = block.equals(type.block()) || (block.equals(Blocks.log2) && type.block().equals(Blocks.log));
-                    if (fit && (block.equals(Blocks.log) || block.equals(Blocks.log2))) {
-                        meta = world.getBlockMetadata(x + xx - 1, y - yy, z + zz - 1) - type.meta();
-                        fit = meta >= 0 && meta < 4;
-                    } else if (fit && block.equals(Blocks.carpet))
-                        fit = world.getBlockMetadata(x + xx - 1, y - yy, z + zz - 1) == type.meta();
+                    if (block.equals(ModBlocks.GRAVESTONE) && block.equals(type.block()))
+                        fit = true;
+                    else {
+                        meta = world.getBlockMetadata(x + xx - 1, y - yy, z + zz - 1);
+                        fit = block.equals(type.block()) && meta == type.meta();
+                    }
                     if (!fit) return false;
                 }
         }
         return true;
     }
 
+    @SuppressWarnings("SameReturnValue")
     protected boolean replaceStructure(World world, int x, int y, int z) {
         for (int yy = 0; yy < 3; yy++)
             for (int xx = 0; xx < 3; xx++)
                 for (int zz = 0; zz < 3; zz++)
                     world.setBlockToAir(x + xx - 1, y - yy + 1, z + zz - 1);
         world.setBlock(x, y - 1, z, CampfireBackportBlocks.soul_campfire_base);
+        world.setBlockMetadataWithNotify(x, y - 1, z, 2, 3);
         world.playSoundEffect((double)x + 0.5, (double)y + 0.5, (double)z + 0.5,
                 "thaumcraft:wand", 1.0F, 1.0F);
         return true;
