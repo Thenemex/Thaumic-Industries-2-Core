@@ -56,12 +56,10 @@ public class CampfireHandler extends WandEventHandler {
         boolean fit;
         int meta;
         for (int yy = 0; yy < 2; yy++) {
-            if (yy != 0) logger.info("- - - - -");
             for (int xx = 0; xx < 3; xx++)
                 for (int zz = 0; zz < 3; zz++) {
                     Block block = world.getBlock(x + xx - 1, y - yy, z + zz - 1);
                     BlockType type = blueprint[yy][xx][zz];
-                    logger.info(block.getLocalizedName(), world.getBlockMetadata(x + xx - 1, y - yy, z + zz - 1), "|", x + xx - 1, y - yy + 1, z + zz - 1, "|", type.block().getLocalizedName(), type.meta());
                     fit = block.equals(type.block()) || (block.equals(Blocks.log2) && type.block().equals(Blocks.log));
                     if (fit && (block.equals(Blocks.log) || block.equals(Blocks.log2))) {
                         meta = world.getBlockMetadata(x + xx - 1, y - yy, z + zz - 1) - type.meta();
@@ -71,7 +69,6 @@ public class CampfireHandler extends WandEventHandler {
                     if (!fit) return false;
                 }
         }
-        logger.info("- - - - - - - - - -");
         return true;
     }
 
