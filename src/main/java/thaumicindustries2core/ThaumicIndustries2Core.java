@@ -54,6 +54,7 @@ public class ThaumicIndustries2Core{
             "after:benway_knowledge;" +
             "after:campfirebackport;" +
             "after:ForbiddenMagic;" +
+            "after:gravetone;" +
             "after:MagicCookie;" +
             "after:TaintedMagic;" +
             "after:thaumicbases;" +
