@@ -61,8 +61,7 @@ public class CampfireSoulCompoundRecipe extends AResearch {
     @Override
     public void setResearchProperties() {
         this.research.setParents(CampfireCompoundRecipe.tag);
-        this.research.setParentsHidden("ROD_greatwood");
         this.research.setHidden();
-        this.research.setItemTriggers(new ItemStack(Blocks.soul_sand));
+        this.research.setAspectTriggers(SOUL);
     }
 }
