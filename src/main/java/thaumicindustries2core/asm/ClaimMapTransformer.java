@@ -244,7 +244,7 @@ public class ClaimMapTransformer implements IClassTransformer {
         }
         if (n.getOpcode() == Opcodes.LDC && n instanceof LdcInsnNode) {
             Object cst = ((LdcInsnNode) n).cst;
-            return cst instanceof Float && ((Float) cst).floatValue() == value;
+            return cst instanceof Float && (Float) cst == value;
         }
         return false;
     }

@@ -1,7 +1,7 @@
 package thaumicindustries2core.model.research;
 
 import connor135246.campfirebackport.common.blocks.CampfireBackportBlocks;
-import de.maxhenkel.gravestone.ModBlocks;
+import de.maxhenkel.gravestone.ModItems;
 import nemexlib.api.items.ItemFinder;
 import nemexlib.api.recipes.mystical.CompoundAdder;
 import nemexlib.api.recipes.workbench.WorkbenchAdder;
@@ -63,7 +63,7 @@ public class CampfireSoulCompoundRecipe extends AResearch {
     }
 
     protected IRecipe addRecipeGravestone() {
-        return WorkbenchAdder.addRecipe(new ItemStack(ModBlocks.GRAVESTONE), false,
+        return WorkbenchAdder.addRecipe(new ItemStack(ModItems.GRAVESTONE), false,
                 "  C", "BBR", "DDD",
                 'C', new ItemStack(Blocks.cobblestone_wall),
                 'B', new ItemStack(Items.bone),
