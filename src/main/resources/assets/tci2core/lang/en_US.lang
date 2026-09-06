@@ -33,10 +33,10 @@ mod_research_page.VANILLAFURNACE.1=After some struggles on your first steps thro
 mod_research_name.CAMPFIRE=Wooden Campfire
 mod_research_text.CAMPFIRE=Let starvation behind
 mod_research_page.CAMPFIRE.1=A basic caveman campfire shouldn't be too hard to make ... right ? <LINE> Any kind of vanilla wood logs and slabs can be used to process to turn this construct into an actual campfire ! <BR> Sneaking and right clicking the black carpet with your wand will trigger and magically turn the structure into a campfire.
-mod_research_page.CAMPFIRE.3=You can lit it on fire by using certain items, or by using a bit of Ignis from your wand ! The campfire will die by itself after a few minutes. <LINE> While it is burning, you can cook up to four raw items - they will take around 20 to 30 seconds before they become eatable !
+mod_research_page.CAMPFIRE.3=You can lit it on fire by using certain items, or by using a bit of Ignis from your wand ! The campfire will die by itself after a few minutes. <LINE> While it is burning, you can cook up to four raw items - they will take around 20 to 30 seconds before they become eatable ! <BR> The campfire cannot be harvested, destroying it will only drop some charcoal.
 #
 mod_research_name.CAMPFIRE_SOUL=Soul Campfire
-mod_research_text.CAMPFIRE_SOUL=TEXT TO ADD
-mod_research_page.CAMPFIRE_SOUL.1=TEXT TO ADD
-mod_research_page.CAMPFIRE_SOUL.3=TEXT TO ADD
+mod_research_text.CAMPFIRE_SOUL=Rising from the ashes
+mod_research_page.CAMPFIRE_SOUL.1=While considering making a bed, you couldn't find any thaumaturgical way of skipping the night with a simple construct. That's when a genius idea hit you : using the aspect of soul paired with a gravestone, to make a magical respawn point ! <LINE> The recipe for the gravestone is showing at the last page of this research. Once you built the whole structure, make sure your wand got the required vis then sneak and right click the gravestone with it ; shall an unlit soul campfire appear magically !
+mod_research_page.CAMPFIRE_SOUL.3=This campfire is special and will burn as long as your soul is "alive" ; to link your soul to it, you need to sneak and right click the campfire when it is lit on fire. Once done if you happen to die, you'll respawn right next to this campfire, and this one will extinguish its blue flames. <LINE> You can make a soul campfire lit on fire the same way it worked on the regular one ; you just need a bit more aspects in your wand, and no other items are able to ignite it.
 #
