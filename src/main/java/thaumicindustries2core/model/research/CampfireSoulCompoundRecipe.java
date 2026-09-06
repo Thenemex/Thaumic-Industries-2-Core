@@ -1,12 +1,16 @@
 package thaumicindustries2core.model.research;
 
 import connor135246.campfirebackport.common.blocks.CampfireBackportBlocks;
+import de.maxhenkel.gravestone.ModBlocks;
 import nemexlib.api.items.ItemFinder;
 import nemexlib.api.recipes.mystical.CompoundAdder;
+import nemexlib.api.recipes.workbench.WorkbenchAdder;
 import nemexlib.api.thaumcraft.aspects.Aspects;
 import nemexlib.api.thaumcraft.research.AResearch;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.research.ResearchPage;
 import thaumcraft.common.config.ConfigBlocks;
@@ -35,7 +39,8 @@ public class CampfireSoulCompoundRecipe extends AResearch {
         this.setNewResearch(5, -7).setPages(newTextPage(1),
                 new ResearchPage(addCompoundRecipeCampfireSoul()),
                 newTextPage(3),
-                new ResearchPage(addCompoundRecipeLitCampfireSoul()));
+                new ResearchPage(addCompoundRecipeLitCampfireSoul()),
+                new ResearchPage(addRecipeGravestone()));
         // Handler for igniting the campfire with custom aspects
         new CampfireSoulIgniterHandler(tag, ignite);
     }
@@ -57,6 +62,14 @@ public class CampfireSoulCompoundRecipe extends AResearch {
                 findItemTC("WandCasting"), new ItemStack(CampfireBackportBlocks.soul_campfire_base));
     }
 
+    protected IRecipe addRecipeGravestone() {
+        return WorkbenchAdder.addRecipe(new ItemStack(ModBlocks.GRAVESTONE), false,
+                "  C", "BBR", "DDD",
+                'C', new ItemStack(Blocks.cobblestone_wall),
+                'B', new ItemStack(Items.bone),
+                'R', new ItemStack(Items.rotten_flesh),
+                'D', new ItemStack(Blocks.dirt));
+    }
 
     @Override
     public void setResearchProperties() {
