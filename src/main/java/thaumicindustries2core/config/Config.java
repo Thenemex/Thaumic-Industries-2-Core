@@ -13,9 +13,9 @@ public class Config extends AConfig {
     public static int woolToString_Aspect_Fabrico, woolToString_Aspect_Perditio, woolToString_stringAmount;
     public static int redstoneDupe_Aspect_Machina, redstoneDupe_Aspect_Potentia, redstoneDupe_outputAmount;
     public static boolean removeDislocationFocus;
-    public static boolean alternativeVisFilter, alternativeCompoundLeather;
+    public static boolean alternativeVisFilter, alternativeCompoundLeather, alternativeSilverwoodSaplingCompound;
     public static int alternativeVisFilter_outputAmount, alternativeCompoundLeather_outputAmount;
-    protected static final String version = "1.16";
+    protected static final String version = "1.18";
 
     public Config(FMLPreInitializationEvent event) {
         super(ThaumicIndustries2Core.modName, event, version);
@@ -73,12 +73,12 @@ public class Config extends AConfig {
             wgEnabled = newEntry(integrations, "Witching Gadgets"); }
 
         comment(tcieFeatures, "You can turn off/on special features made for the modpack Thaumic Industries");
-        // Alternative Vis Filter
         {
+            alternativeSilverwoodSaplingCompound = newEntry(tcieFeatures, "Alternative Silverwood Sapling", "Adds a new research and a mystical construct for turning a greatwood sapling into a silverwood one");
+            // Alternative Vis Filter
             alternativeVisFilter = newEntry(tcieFeatures, "Alternative Vis Filter", "Adds a new research and arcane recipe for Vis Filter");
-            alternativeVisFilter_outputAmount = newEntry(tcieFeatures, "Alternative Vis Filter : Output", 1, 1, 64); }
-        // Alternative Compound Leather
-        {
+            alternativeVisFilter_outputAmount = newEntry(tcieFeatures, "Alternative Vis Filter : Output", 1, 1, 64);
+            // Alternative Leather
             alternativeCompoundLeather = newEntry(tcieFeatures, "Alternative Leather", "Adds a new research and a mystical construct recipe for turning a block of flesh into some leather");
             alternativeCompoundLeather_outputAmount = newEntry(tcieFeatures, "Alternative Leather : Output", 1, 1, 64);
         }
