@@ -34,9 +34,7 @@ public class PlayerCoreProgress implements IExtendedEntityProperties {
             NBTTagList list = compound.getTagList("hasRunCompound", 10); // 10 = NBTTagCompound
             for (int i = 0; i < list.tagCount(); i++) {
                 NBTTagCompound entryTag = list.getCompoundTagAt(i);
-                String key = entryTag.getString("key");
-                boolean value = entryTag.getBoolean("value");
-                hasRunCompound.put(key, value);
+                hasRunCompound.put(entryTag.getString("key"), entryTag.getBoolean("value"));
             }
         }
     }
