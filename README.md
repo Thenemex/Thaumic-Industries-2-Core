@@ -31,3 +31,12 @@ A config file is also present for turning off/on everything you want or don't wa
 
 ### Required mods :
 This mod requires to have Thaumcraft 4 and NemexLib installed to be able to run.
+
+### Additional mods required to compile the mod :
+- Campfire Backport
+- Forbidden Magic
+- Garden Stuff
+- Gravestone Mod
+- Thaumic Bases
+- Thaumic Tinkerer
+- Witching Gadgets
