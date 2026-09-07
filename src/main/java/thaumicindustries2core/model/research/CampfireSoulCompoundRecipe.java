@@ -40,6 +40,7 @@ public class CampfireSoulCompoundRecipe extends AResearch {
                 new ResearchPage(addCompoundRecipeCampfireSoul()),
                 newTextPage(3),
                 new ResearchPage(addCompoundRecipeLitCampfireSoul()),
+                newTextPage(6),
                 new ResearchPage(addRecipeGravestone()));
         // Handler for igniting the campfire with custom aspects
         new CampfireSoulIgniterHandler(tag, ignite);
