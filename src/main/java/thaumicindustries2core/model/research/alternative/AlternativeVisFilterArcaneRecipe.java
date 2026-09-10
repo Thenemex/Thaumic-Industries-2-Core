@@ -1,4 +1,4 @@
-package thaumicindustries2core.model.research;
+package thaumicindustries2core.model.research.alternative;
 
 import nemexlib.api.recipes.arcane.ArcaneAdder;
 import nemexlib.api.thaumcraft.aspects.Aspects;

@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.items.wands.ItemWandCasting;
 import thaumicindustries2core.config.Config;
-import thaumicindustries2core.model.research.AlternativeLeatherCompoundRecipe;
+import thaumicindustries2core.model.research.alternative.AlternativeLeatherCompoundRecipe;
 
 import static thaumicindustries2core.model.properties.PlayerCoreProgress.*;
 

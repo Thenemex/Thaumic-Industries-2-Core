@@ -16,7 +16,7 @@ import static thaumicindustries2core.ThaumicIndustries2Core.modID;
 
 @SuppressWarnings({"unused", "EmptyMethod"})
 @Mod(modid = modID, useMetadata = true, version = "1.17.3", dependencies = dependencies)
-public class ThaumicIndustries2Core{
+public class ThaumicIndustries2Core {
 
     public static final String modID = "TCI2Core", modName = "ThaumicIndustries2Core";
     public static AConfig config;
@@ -24,7 +24,7 @@ public class ThaumicIndustries2Core{
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        config = new Config(event).init(); // Init config
+        config = new Config(event).init();
     }
 
     @Mod.EventHandler
