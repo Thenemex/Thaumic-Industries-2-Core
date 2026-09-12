@@ -36,5 +36,6 @@ public class AlternativeSilverwoodSaplingCompoundRecipe extends AResearch {
     @Override
     public void setResearchProperties() {
         this.research.setRound().setAutoUnlock();
+        this.research.setParents("PLANTS");
     }
 }

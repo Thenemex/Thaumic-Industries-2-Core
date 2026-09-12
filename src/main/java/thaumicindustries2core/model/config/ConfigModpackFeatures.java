@@ -1,5 +1,6 @@
 package thaumicindustries2core.model.config;
 
+import nemexlib.api.thaumcraft.API;
 import thaumicindustries2core.model.events.AlternativeLeatherHandler;
 import thaumicindustries2core.model.research.alternative.AlternativeLeatherCompoundRecipe;
 import thaumicindustries2core.model.research.alternative.AlternativeSilverwoodSaplingCompoundRecipe;
@@ -15,6 +16,13 @@ public class ConfigModpackFeatures {
         if (alternativeCompoundLeather)
             new AlternativeLeatherCompoundRecipe().setHandler(new AlternativeLeatherHandler());
         if (alternativeSilverwoodSaplingCompound)
-            new AlternativeSilverwoodSaplingCompoundRecipe();
+            loadAltSilverwoodSapling_COMPOUND();
+    }
+
+    private static void loadAltSilverwoodSapling_COMPOUND() {
+        new AlternativeSilverwoodSaplingCompoundRecipe();
+        // Swapping two researches
+        API.moveResearch("PLANTS", -4, -4);
+        API.moveResearch("PECH", -2, -4);
     }
 }
