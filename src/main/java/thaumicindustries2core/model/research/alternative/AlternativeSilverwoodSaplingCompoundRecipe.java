@@ -30,7 +30,7 @@ public class AlternativeSilverwoodSaplingCompoundRecipe extends AResearch {
     protected List addCompoundRecipeSilverwoodSapling() {
         // ToDo Move this to automatic creation in the handler
         return CompoundAdder.addCompoundRecipe(tag, compound, 1, 2, 1,
-                findItemTC("WandCasting"), new ItemStack(ConfigBlocks.blockCustomPlant, 1, 1));
+                findItemTC("WandCasting"), new ItemStack(ConfigBlocks.blockCustomPlant));
     }
 
     @Override

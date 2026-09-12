@@ -16,7 +16,7 @@ public class ConfigModpackFeatures {
         if (alternativeCompoundLeather)
             new AlternativeLeatherCompoundRecipe().setHandler(new AlternativeLeatherHandler());
         if (alternativeSilverwoodSaplingCompound)
-            loadAltSilverwoodSapling_COMPOUND();
+            loadAltSilverwoodSapling_COMPOUND(); // ToDo WandEventHandler
     }
 
     private static void loadAltSilverwoodSapling_COMPOUND() {
