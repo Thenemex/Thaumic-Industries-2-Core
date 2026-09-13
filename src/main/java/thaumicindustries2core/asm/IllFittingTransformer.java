@@ -41,8 +41,6 @@ public class IllFittingTransformer implements IClassTransformer {
                     && (method.desc.equals("(Lnet/minecraft/entity/EntityLivingBase;I)V")
                     || method.desc.equals("(Lsv;I)V"))) {
 
-                logger.info("Found performEffect, emptying it... desc =", method.desc);
-
                 method.instructions.clear();
                 method.tryCatchBlocks.clear();
                 if (method.localVariables != null) method.localVariables.clear();
