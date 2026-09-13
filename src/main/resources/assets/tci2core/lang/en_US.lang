@@ -22,8 +22,8 @@ mod_research_name.ALTERNATIVELEATHER=Alternative Leather
 mod_research_text.ALTERNATIVELEATHER=Let's skin those zombies
 mod_research_page.ALTERNATIVELEATHER.1=After miles and miles of exploration, it seems that all cows were abducted somewhere else nowhere to be found ... Or maybe you were too lazy for searching around ? <BR> Whatever, in your wildest dreams, you thought of a preparation to purify that nasty pile of zombie rotten flesh into tanned leather. <LINE> The process is not efficient at all, and only outputs a few pieces of leather ... <BR> This process was so nasty, you promised yourself to never ever do it again !
 #
-mod_research_name.ALTERNATIVESILVERWOOD=Title
-mod_research_text.ALTERNATIVESILVERWOOD=Subtitle
+mod_research_name.ALTERNATIVESILVERWOOD=The white tree
+mod_research_text.ALTERNATIVESILVERWOOD=... No silverwood ?
 mod_research_page.ALTERNATIVESILVERWOOD.1=Something is off... The book tells you about a shimmering pale magical tree and yet you cannot find it anywhere in this damned world.<BR>Is this some kind of a joke?        - You ask yourself.<BR>And then suddenly something interesting happens in your entries, a desperate craft shows up, out of thin air! It feels like the book is yelling to you "You will have it just this time!"<BR>Either in desperation or just for a freebie, it seems like you have this one chance to bring this valuable sapling to your hands, do not think you will have another try!
 #
 mod_research_name.FLINTANDSTEEL=Flint and Steel
