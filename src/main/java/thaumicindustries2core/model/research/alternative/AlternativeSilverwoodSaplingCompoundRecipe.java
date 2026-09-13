@@ -14,10 +14,11 @@ import static nemexlib.api.items.ItemFinder.findItemTC;
 @SuppressWarnings("rawtypes")
 public class AlternativeSilverwoodSaplingCompoundRecipe extends AResearch {
 
+    public final static String tag = "ALTERNATIVESILVERWOOD";
     public final static Aspects compound = new Aspects(20, 0, 0, 20, 60, 0);
 
     public AlternativeSilverwoodSaplingCompoundRecipe() {
-        super("BASICS", "ALTERNATIVESILVERWOOD", ConfigBlocks.blockCustomPlant, 1);
+        super("BASICS", tag, ConfigBlocks.blockCustomPlant);
     }
 
     @Override

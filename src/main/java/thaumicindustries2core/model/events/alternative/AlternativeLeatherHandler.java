@@ -1,4 +1,4 @@
-package thaumicindustries2core.model.events;
+package thaumicindustries2core.model.events.alternative;
 
 import nemexlib.api.events.SingleBlockWithDropsHandlerWithoutUpgrade;
 import nemexlib.api.items.types.BlockType;
