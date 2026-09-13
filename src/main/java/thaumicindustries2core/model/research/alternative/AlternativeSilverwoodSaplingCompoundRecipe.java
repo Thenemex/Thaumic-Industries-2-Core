@@ -18,7 +18,7 @@ public class AlternativeSilverwoodSaplingCompoundRecipe extends AResearch {
     public final static Aspects compound = new Aspects(20, 0, 0, 20, 60, 0);
 
     public AlternativeSilverwoodSaplingCompoundRecipe() {
-        super("BASICS", tag, ConfigBlocks.blockCustomPlant);
+        super("BASICS", tag, ConfigBlocks.blockCustomPlant, 1);
     }
 
     @Override
